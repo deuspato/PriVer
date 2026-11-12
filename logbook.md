@@ -23,14 +23,14 @@
 
 | Campo | Preencha |
 |---|---|
-| **Nome do estudante** | _escreva aqui_ |
-| **Curso / Módulo** | _ex.: ADS · 2º período_ |
+| **Nome do estudante** | _Davi Gael Lopes_ |
+| **Curso / Módulo** | _Si · 2º período_ |
 | **Unidade curricular** | Algoritmos e Programação — UnDB 2026.2 |
 | **Professor** | Rondineli Seba Salomão |
-| **App-base do meu CRUD** | _ex.: um app de delivery, um app de músicas…_ |
-| **Link do meu repositório** | _https://github.com/…_ |
-| **Dupla de revisão (Campo 05)** | _nome do colega cujo CRUD vou revisar / que revisa o meu_ |
-| **Função neste ciclo** | _Autor do meu CRUD · Revisor do CRUD de um colega_ |
+| **App-base do meu CRUD** | _GitHub_ |
+| **Link do meu repositório** | _https://github.com/deuspato/PriVer_ |
+| **Dupla de revisão (Campo 05)** | _Joás/Joás_ |
+| **Função neste ciclo** | _Davi Gael Lopes · Revisor do CRUD de um colega_ |
 
 ---
 
