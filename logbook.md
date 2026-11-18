@@ -27,7 +27,7 @@
 | **Curso / Módulo** | _Si · 2º período_ |
 | **Unidade curricular** | Algoritmos e Programação — UnDB 2026.2 |
 | **Professor** | Rondineli Seba Salomão |
-| **App-base do meu CRUD** | _GitHub_ |
+| **App-base do meu CRUD** | _GitHub (PriVer — Versionador de Impressão 3D em CLI)_ |
 | **Link do meu repositório** | _https://github.com/deuspato/PriVer_ |
 | **Dupla de revisão (Campo 05)** | _Joás/Joás_ |
 | **Função neste ciclo** | _Davi Gael Lopes · Revisor do CRUD de um colega_ |
@@ -107,9 +107,9 @@ Atualize a cada commit (troque ⬜ por ✅).
 | Grupo | Item | Prazo | Preenchido | Commit |
 |:--:|---|---|:--:|:--:|
 | 1 | Identificação | 16/11 | ✅ | ✅ |
-| 1 | Registros dos Ciclos 01, 02, 03 e 04 | 16/11 | ⬜ | ⬜ |
-| 1 | Campo 01 — Instrumento de entrada | 16/11 | ⬜ | ⬜ |
-| 1 | Campo 02 — Aprofundamento | 16/11 | ⬜ | ⬜ |
+| 1 | Registros dos Ciclos 01, 02, 03 e 04 | 16/11 | ✅ | ⬜ |
+| 1 | Campo 01 — Instrumento de entrada | 16/11 | ✅ | ⬜ |
+| 1 | Campo 02 — Aprofundamento | 16/11 | ✅ | ⬜ |
 | 2 | Registros dos Ciclos 05, 06, 07 e 08 | 21/11 | ⬜ | ⬜ |
 | 2 | Checkpoint Conceitual | 21/11 | ⬜ | ⬜ |
 | 2 | Campo 03 — Execução e desvios | 21/11 | ⬜ | ⬜ |
@@ -138,11 +138,11 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 ```markdown
 ### Registro do Ciclo NN — DD/MM
-1. **Desafio do ciclo (em 1 frase): estruturar um dicionario**
-2. **O que implementei (commits / arquivos / links): implementei um versionador de impressão 3d**
-3. **Objeto(s) de conhecimento mobilizado(s) (vocabulário técnico): documentação python**
-4. **Desvio ou erro encontrado + causa técnica: obtive erros na definição de variaveis por erros de escritas**
-5. **Decisão de ajuste + fonte (livro, doc, vídeo, colega, IA): **
+1. **Desafio do ciclo (em 1 frase):**
+2. **O que implementei (commits / arquivos / links):**
+3. **Objeto(s) de conhecimento mobilizado(s) (vocabulário técnico):**
+4. **Desvio ou erro encontrado + causa técnica:**
+5. **Decisão de ajuste + fonte (livro, doc, vídeo, colega, IA):**
 6. **Feedback recebido (professor/colega) e o que mudei por causa dele:**
 7. **Próximo passo:**
 ```
@@ -163,10 +163,10 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 > **Sugestão de ordem:** (1) Identificação → (2) **Campo 01 primeiro, sem consulta** → (3) Registros dos Ciclos 01 a 04 → (4) Campo 02, com pesquisa.
 
 **Checklist do Grupo 1**
-- [ ] Identificação preenchida (app-base, link do repositório, dupla de revisão)
-- [ ] Campo 01: 3 objetos de conhecimento, 3 lacunas, hipótese de até 5 linhas
-- [ ] Registros dos Ciclos 01, 02, 03 e 04 com os 7 itens
-- [ ] Campo 02: 2 referências com contribuição, hipótese revisada, 3 recursos
+- [x] Identificação preenchida (app-base, link do repositório, dupla de revisão)
+- [x] Campo 01: 3 objetos de conhecimento, 3 lacunas, hipótese de até 5 linhas
+- [x] Registros dos Ciclos 01, 02, 03 e 04 com os 7 itens
+- [x] Campo 02: 2 referências com contribuição, hipótese revisada, 3 recursos
 - [ ] Commits no GitHub e painel atualizado
 
 ## 🟢 CICLO 01 — 12/08 — Preparação do laboratório e escolha do projeto
@@ -182,13 +182,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 01 — 12/08
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Configurar o ambiente de desenvolvimento via terminal, estruturar o repositório no GitHub com fluxo de branches isoladas e definir o escopo do CRUD *PriVer* (versionador de impressão 3D inspirado no GitHub).
+2. **O que implementei (commits / arquivos / links):** Criação do repositório `PriVer` (`https://github.com/deuspato/PriVer`), configuração inicial via CLI do Git com separação entre as branches `main` (deploy estável) e `development` (desenvolvimento e testes), além do esqueleto inicial da aplicação em Python voltada para interface de linha de comando (CLI).
+3. **Objeto(s) de conhecimento mobilizado(s):** Controle de versão distribuído (Git), fluxo de ramificação (*branching workflow* com `main` e `development`), comandos básicos de terminal/CLI (já possuía familiaridade básica com terminal, mas o fluxo isolado de *branches* para proteger o deploy principal foi novo) e definição de esquema (*schema*) de entidades para um CRUD.
+4. **Desvio ou erro encontrado + causa técnica:** Risco inicial de comprometer o funcionamento estável do projeto ao testar alterações diretamente na branch principal; causa técnica: ausência de uma branch intermediária (`development`) para validar modificações incrementais antes de integrá-las ao deploy principal (`main`).
+5. **Decisão de ajuste + fonte:** Adotar a estratégia de separação de fluxos de trabalho entre `development` (para escrita e validação de código via terminal) e `main` (recebendo apenas *merges* testados), fundamentado na documentação oficial do Git (*Pro Git Book*, cap. 3 — *Git Branching*) e no guia de fluxo do GitHub Docs.
+6. **Feedback recebido e o que mudei:** Orientação em aula sobre a importância de registrar passos pequenos, manter o histórico do Git íntegro e definir claramente o domínio do CRUD; passei a realizar deploys incrementais da `development` para a `main` a cada funcionalidade validada no terminal.
+7. **Próximo passo:** Implementar a declaração de variáveis, os tipos de dados e a entrada/saída via CLI para o cadastro inicial de versões de projetos de impressão 3D.
 
 ## 🟢 CICLO 02 — 19/08 — Variáveis, tipos de dados e entrada/saída
 
@@ -213,19 +213,18 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 *Grupo 1 | Prazo segunda 16/11, 23h59 | SEM CONSULTA*
 
 **1a. Objetos de conhecimento identificados (mínimo 3, com vocabulário técnico):**
-1. _…_
-2. _…_
-3. _…_
-4. _…_ *(opcional)*
+1. Declaração de variáveis, regras de nomenclatura de identificadores e tipos de dados primitivos (`str`, `int`, `float`, `bool`) em Python.
+2. Entrada e saída padrão de dados em interface de linha de comando (CLI) utilizando `input()` e `print()`, incluindo conversão explícita de tipos (*casting*).
+3. Estruturas de controle de fluxo (condicionais e laços de repetição) para validar entradas do usuário e evitar interrupções na execução do CRUD.
 
 **1b. Lacunas — o que não sei e preciso descobrir (mínimo 3, com precisão técnica):**
-1. _…_
-2. _…_
-3. _…_
+1. Não sei como realizar a conversão segura (*casting*) de valores recebidos como texto via `input()` para tipos numéricos (como temperatura de extrusão ou tempo estimado de impressão) sem quebrar o programa caso o usuário digite caracteres inválidos.
+2. Tenho dificuldade em manter consistência na escrita e padronização dos nomes de variáveis ao longo do código, o que gera erros de referência por falhas ortográficas.
+3. Não sei como estruturar verificações condicionais eficientes para barrar registros de versões de impressão 3D com campos vazios ou valores negativos antes de armazená-los no sistema.
 
 **1c. Hipótese inicial em até 5 linhas — com lógica da área de formação:**
 
-> _…_
+> As falhas do CRUD *PriVer* em ambiente CLI ocorrem principalmente porque os dados capturados pelo terminal chegam sempre como texto (`str`) e são manipulados sem conversão de tipo nem validação prévia de valores vazios ou negativos. Além disso, erros ortográficos na nomenclatura de variáveis e a falta de testes isolados antes da integração causam interrupções em tempo de execução (`NameError` e `ValueError`).
 
 ### 🧩 CAMPO 02 — Aprofundamento pós-aula
 *AV Qualis — Grupo 1 | Segunda 16/11, 23h59*
@@ -234,30 +233,31 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **2a. Aprofundamento dos objetos de conhecimento (mínimo 2 referências com síntese da contribuição para a solução):**
 
-- **Referência 1:** _…_ — **Contribuição:** _…_
-- **Referência 2:** _…_ — **Contribuição:** _…_
+- **Referência 1:** W3Schools — *Python Variables & Variable Names* e *Python Casting* (`https://www.w3schools.com/python/python_variables.asp`). — **Contribuição:** Permitiu revisar as regras sintáticas de criação de identificadores em Python, adotar a convenção `snake_case` para eliminar erros ortográficos entre a definição e o uso das variáveis no código, além de esclarecer o emprego de `int()`, `float()` e `str()` na conversão explícita de entradas capturadas pelo terminal.
+- **Referência 2:** Documentação Oficial do Python 3 — *Tutorial: Uma Introdução Informal ao Python* (Seção 3) e *Built-in Functions* (`input()`, `print()`). — **Contribuição:** Confirmou que a função `input()` sempre retorna uma cadeia de caracteres (`str`) da entrada padrão (CLI), fundamentando a necessidade de higienizar espaços em branco (`.strip()`) e converter tipos antes de executar operações ou validações nos registros de impressão 3D.
+- **Referência 3:** Downey, Allen B. — *Pense em Python: Pense Como um Cientista da Computação* (Cap. 2 — Variáveis, expressões e instruções). — **Contribuição:** Consolidou a compreensão sobre atribuição, tipagem dinâmica e distinção entre erros de sintaxe e erros em tempo de execução, orientando a organização dos atributos de cada versão de impressão no *PriVer*.
 
 **2b. Hipótese revisada — o que mudou em relação ao Campo 01 e por quê:**
 
-> _…_
+> A pesquisa confirmou e aprofundou a hipótese inicial do Campo 01: o problema não decorre apenas da entrada textual via `input()`, mas da combinação entre tipagem dinâmica do Python e ausência de padronização nos identificadores. Ao consultar o W3Schools e a documentação oficial do Python, ficou evidente que erros ortográficos na escrita de variáveis geram exceções `NameError` em tempo de execução (já que a linguagem não exige declaração prévia de variáveis) e que entradas numéricas na CLI requerem conversão explícita (`int`/`float`) associada a verificações prévias para evitar `ValueError` ao processar registros defeituosos.
 
 **2c. Dimensionamento inicial de recursos (recurso, quantidade estimada, justificativa técnica — mínimo 3 itens):**
 
 | RECURSO / MATERIAL / INSUMO | QUANTIDADE ESTIMADA | JUSTIFICATIVA TÉCNICA |
 |---|---|---|
-| _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ |
+| Horas de estudo e prática em terminal (CLI) | 8 horas semanais | Tempo necessário para consultar documentação (W3Schools e Python Docs), testar comandos diretamente no terminal e corrigir gradualmente erros de sintaxe e nomenclatura. |
+| Branches e deploys incrementais no GitHub | 2 branches (`development` e `main`) e ~10 commits de deploy | Isolar o fluxo de desenvolvimento e depuração (`development`) do código estável (`main`), evitando corromper o deploy principal durante os ajustes. |
+| Casos de teste manuais via CLI | 12 casos de teste (entradas válidas, vazias, tipos trocados e valores negativos) | Validar o comportamento de `input()`, `.strip()` e das conversões de tipo antes de realizar o *merge* de cada alteração para a branch `main`. |
+| Atributos estruturados por versão de impressão 3D | 6 campos principais (`id_versao`, `nome_projeto`, `numero_versao`, `filamento`, `temperatura_bico`, `tempo_minutos`) | Estabelecer um esquema mínimo e padronizado em `snake_case` para representar cada registro no CRUD *PriVer*. |
 
 #### Registro do Ciclo 02 — 19/08
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Implementar a captura e exibição de dados via terminal (CLI) para os registros de versões de impressão 3D, garantindo tipagem adequada e padronização na nomenclatura das variáveis.
+2. **O que implementei (commits / arquivos / links):** Rotina inicial de entrada e saída via CLI na branch `development` do repositório `PriVer` (`https://github.com/deuspato/PriVer`), definindo variáveis em `snake_case` para os parâmetros da impressão 3D (nome do projeto, versão, filamento, temperatura e tempo estimado) e realizando *merge* incremental para `main` após testes no terminal.
+3. **Objeto(s) de conhecimento mobilizado(s):** Variáveis, regras de nomenclatura de identificadores (`snake_case`), tipagem dinâmica, tipos primitivos (`str`, `int`, `float`), entrada e saída padrão (`input()`, `print()`) e conversão de tipos (*casting*).
+4. **Desvio ou erro encontrado + causa técnica:** Ocorrência recorrente de exceções `NameError` e falhas ao referenciar atributos da impressão 3D; causa técnica: erros ortográficos na digitação dos nomes das variáveis entre a declaração e as chamadas seguintes, somados à tentativa de operar valores numéricos lidos diretamente como `str` pelo `input()`.
+5. **Decisão de ajuste + fonte:** Padronizar todas as variáveis utilizando `snake_case` com nomes descritivos, revisar o código no terminal antes de cada deploy para a branch `main` e aplicar conversão explícita (`int()`/`float()`), com base nos guias *Python Variables* e *Python Casting* do W3Schools e na documentação oficial do Python 3.
+6. **Feedback recebido e o que mudei:** Orientações em laboratório sobre legibilidade de código e boas práticas de nomeação; substitui identificadores abreviados ou com grafia inconsistente por nomes padronizados e claros.
+7. **Próximo passo:** Estruturar o fluxograma de operações do CRUD na CLI e aplicar operadores relacionais e lógicos para validar parâmetros técnicos das versões de impressão 3D.
 
 ## 🟢 CICLO 03 — 26/08 — Operadores, fluxogramas e paradigmas
 
@@ -270,13 +270,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 03 — 26/08
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Modelar o fluxo lógico de execução do CRUD *PriVer* na interface CLI utilizando operadores aritméticos, relacionais e lógicos para validar parâmetros de impressão 3D.
+2. **O que implementei (commits / arquivos / links):** Mapeamento do fluxo de operações em CLI e implementação de expressões de comparação e cálculo (verificação de opção selecionada no menu, checagem de faixas válidas de temperatura do bico e cálculo de variação de tempo entre versões) na branch `development` do `PriVer`, com deploy incremental para `main`.
+3. **Objeto(s) de conhecimento mobilizado(s):** Operadores aritméticos (`+`, `-`, `*`, `/`), operadores relacionais (`==`, `!=`, `<`, `>`, `<=`, `>=`), operadores lógicos (`and`, `or`, `not`), precedência de operadores, tipos booleanos (`bool`), fluxogramas e paradigma de programação imperativa/procedural. O fluxograma ajudou a perceber caminhos sem retorno no menu da CLI quando o usuário digitava uma opção inválida.
+4. **Desvio ou erro encontrado + causa técnica:** Falha na verificação das opções do menu CLI e na validação de limites de temperatura de impressão; causa técnica: confusão pontual entre o operador de atribuição (`=`) e o de comparação de igualdade (`==`), além de erro de precedência ao combinar expressões com `and` e `or` sem parênteses explícitos.
+5. **Decisão de ajuste + fonte:** Corrigir todas as comparações de igualdade para `==` e isolar expressões lógicas compostas com parênteses para garantir a ordem de avaliação, testando o comportamento no terminal antes do *merge* para `main`, com base em *Pense em Python* (Cap. 5 — Condicionais e recursividade) e no guia *Python Operators* do W3Schools.
+6. **Feedback recebido e o que mudei:** Na discussão sobre fluxogramas em aula, identifiquei que faltava tratar explicitamente as entradas fora das opções previstas; acrescentei desvios de tratamento no fluxo antes de avançar para o processamento dos dados.
+7. **Próximo passo:** Implementar as estruturas condicionais (`if`, `elif`, `else`) para controlar o roteamento do menu CLI e aplicar regras de negócio na validação de versões de impressão 3D.
 
 ## 🟢 CICLO 04 — 02/09 — Estruturas condicionais: `if`, `elif`, `else`
 
@@ -291,13 +291,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 04 — 02/09
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Aplicar estruturas condicionais (`if`, `elif`, `else`) para controlar o menu da CLI e impor regras de negócio que impeçam o cadastro de versões de impressão 3D com dados inconsistentes.
+2. **O que implementei (commits / arquivos / links):** Implementação da estrutura de decisão do menu principal via CLI (`if`/`elif`/`else` para criar, listar, atualizar e excluir versões) e blocos condicionais de validação de regras de negócio (nome do projeto obrigatório, temperatura do bico maior que zero e tempo estimado positivo) na branch `development` do `PriVer`, seguidos de testes no terminal e deploy para `main`.
+3. **Objeto(s) de conhecimento mobilizado(s):** Estruturas condicionais (`if`, `elif`, `else`), controle de fluxo de execução, validação de regras de negócio e manipulação de strings (`.strip()`).
+4. **Desvio ou erro encontrado + causa técnica:** Registros do lote de dados defeituosos contendo strings vazias (`""`), apenas espaços em branco ou valores negativos de temperatura e tempo de impressão passavam pelo cadastro; causa técnica: ausência de guardas condicionais prévias verificando `.strip() == ""` e valores `<= 0` antes de aceitar o registro no fluxo do CRUD.
+5. **Decisão de ajuste + fonte:** Adicionar blocos condicionais de validação (`if not nome_projeto.strip():` e `elif temperatura_bico <= 0 or tempo_minutos <= 0:`) para barrar registros inválidos e exibir alertas específicos no terminal, fundamentado na documentação oficial do Python 3 (*More Control Flow Tools — `if` Statements*) e no guia *Python If...Else* do W3Schools. Comparando com o Campo 02, esse desvio já estava previsto no dimensionamento dos 12 casos de teste manuais (entradas vazias e valores negativos).
+6. **Feedback recebido e o que mudei:** Colegas observaram que mensagens genéricas de erro dificultavam saber qual parâmetro estava incorreto na CLI; especifiquei cada retorno nos blocos `elif` e `else` indicando exatamente qual regra de negócio foi violada.
+7. **Próximo passo:** Aprofundar o uso de condicionais aninhadas e operadores lógicos compostos (Ciclo 05 — Grupo 2) para cruzar regras técnicas entre tipo de filamento e faixa recomendada de temperatura.
 
 ---
 
