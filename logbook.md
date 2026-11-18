@@ -106,7 +106,7 @@ Atualize a cada commit (troque ⬜ por ✅).
 
 | Grupo | Item | Prazo | Preenchido | Commit |
 |:--:|---|---|:--:|:--:|
-| 1 | Identificação | 16/11 | ⬜ | ⬜ |
+| 1 | Identificação | 16/11 | ✅ | ✅ |
 | 1 | Registros dos Ciclos 01, 02, 03 e 04 | 16/11 | ⬜ | ⬜ |
 | 1 | Campo 01 — Instrumento de entrada | 16/11 | ⬜ | ⬜ |
 | 1 | Campo 02 — Aprofundamento | 16/11 | ⬜ | ⬜ |
@@ -138,11 +138,11 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 ```markdown
 ### Registro do Ciclo NN — DD/MM
-1. **Desafio do ciclo (em 1 frase):**
-2. **O que implementei (commits / arquivos / links):**
-3. **Objeto(s) de conhecimento mobilizado(s) (vocabulário técnico):**
-4. **Desvio ou erro encontrado + causa técnica:**
-5. **Decisão de ajuste + fonte (livro, doc, vídeo, colega, IA):**
+1. **Desafio do ciclo (em 1 frase): estruturar um dicionario**
+2. **O que implementei (commits / arquivos / links): implementei um versionador de impressão 3d**
+3. **Objeto(s) de conhecimento mobilizado(s) (vocabulário técnico): documentação python**
+4. **Desvio ou erro encontrado + causa técnica: obtive erros na definição de variaveis por erros de escritas**
+5. **Decisão de ajuste + fonte (livro, doc, vídeo, colega, IA): **
 6. **Feedback recebido (professor/colega) e o que mudei por causa dele:**
 7. **Próximo passo:**
 ```
