@@ -391,19 +391,19 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 *AV Qualis — Grupo 2 | Sábado 21/11, 23h59*
 
 **3a. O que descobri que mudou minha compreensão do problema (mínimo 2 achados, com objeto de conhecimento associado):**
-1. _…_ — *Objeto de conhecimento:* _…_
-2. _…_ — *Objeto de conhecimento:* _…_
-3. _…_ *(opcional)*
+1. Percebi que toda entrada capturada pelo usuário no terminal via input() chega como texto (str), o que quebra comparações numéricas ou validações se não houver conversão explícita antes do processamento. — Objeto de conhecimento: Tipos de dados primitivos e coerção/conversão de tipos (int(), float(), str()).
+
+2. Notei que testar apenas o "caminho feliz" na CLI não garante a estabilidade do sistema; entradas vazias ou fora do padrão exigem barreiras de validação antes de qualquer operação de cadastro ou alteração. — Objeto de conhecimento: Estruturas condicionais (if, elif, else) e operadores relacionais/lógicos.
 
 **3b. Desvio em relação ao Campo 02 (ao menos 1 — causa técnica):**
-- **Desvio:** _…_
-- **Causa técnica:** _…_
+- **Desvio:** Precisei realizar mais ciclos de teste e commits na branch development (e dedicar mais tempo à depuração da interface CLI) do que havia dimensionado inicialmente no Campo 02.
+- **Causa técnica:** Ocorreram falhas de execução em tempo de desenvolvimento (NameError por erros ortográficos na nomenclatura de variáveis e erros de validação com entradas inesperadas), exigindo isolamento e correção incremental na branch development antes de liberar o merge para a main.
 
 **3c. Decisão de ajuste (ao menos 1) com justificativa e fonte:**
-- **Decisão:** _…_
-- **Fonte:** _…_
+- **Decisão:** Padronizei a nomenclatura das variáveis do CRUD e implementei estruturas condicionais defensivas (if/elif/else) na branch development para validar entradas vazias e tipos incompatíveis na CLI antes de efetuar o deploy na branch main.
+- **Fonte:** Documentação oficial do Python 3 (seções Built-in Types e Errors and Exceptions) e guias de sintaxe/condicionais do W3Schools.
 
-**Objeto de conhecimento mobilizado nesta decisão:** _…_
+**Objeto de conhecimento mobilizado nesta decisão:** Estruturas de controle condicional, tipagem de dados e escopo/nomenclatura de variáveis.
 
 ### 🧩 CAMPO 04 — Interação com IA
 *AV Qualis — Grupo 2 | Sábado 21/11, 23h59 | OBRIGATÓRIO*
