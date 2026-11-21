@@ -341,6 +341,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 ### 🧩 CHECKPOINT CONCEITUAL INDIVIDUAL
+### !!!!NÃO REALIZADO POR FALTA DAS QUESTÕES!!!! 
 *20 minutos · sem consulta a qualquer fonte, material ou colega · conforme orientação do professor.*
 
 | | |
