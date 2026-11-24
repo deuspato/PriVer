@@ -1,6 +1,5 @@
 import os
 
-
 templateFile = {
     "caminho_origem": "",
     "nome_base": "",
@@ -14,8 +13,12 @@ templateFile = {
 
 registroFile = templateFile.copy()
 
-os.system("clear")
+def clear_screen():
+    os.system("cls") if os.name == "nt" else os.system("clear")
+    
+
 while registroFile["executando"]:
+    clear_screen()
     print("\n--- VERSIONADOR 3D (SEM FUNÇÕES) ---")
     print("1. Enviar arquivo real (Gera nova versão v1, v2...)")
     print("2. Consultar versão atual")
@@ -26,7 +29,7 @@ while registroFile["executando"]:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        os.system("clear")
+        clear_screen()
         caminho = input("Digite o caminho do arquivo (ex: peca.stl): ")
 
         if caminho != "":
@@ -72,7 +75,7 @@ while registroFile["executando"]:
             print("Caminho não pode ser vazio.")
 
     elif opcao == "2":
-        os.system("clear")
+        clear_screen()
         if registroFile["registro_ativo"]:
             print(
                 f"Versão: v{registroFile['versao']} | Envios: {registroFile['qtd_envios']} | Arquivo: {registroFile['ultimo_arquivo_salvo']}"
@@ -81,7 +84,7 @@ while registroFile["executando"]:
             print("Nenhum arquivo enviado até o momento.")
 
     elif opcao == "3":
-        os.system("clear")
+        clear_screen()
         if registroFile["registro_ativo"]:
             novo_nome = input("Digite o novo nome base: ")
             if novo_nome != "":
@@ -93,7 +96,7 @@ while registroFile["executando"]:
             print("Envie um arquivo antes de atualizar.")
 
     elif opcao == "4":
-        os.system("clear")
+        clear_screen()
         # O template brilha aqui: restaura tudo para o padrão em uma linha!
         registroFile = templateFile.copy()
         print("Registros zerados com sucesso.")
@@ -101,8 +104,8 @@ while registroFile["executando"]:
     elif opcao == "5":
         registroFile["executando"] = False
         print("Encerrando o programa.")
-        os.system("clear")
+        clear_screen()
 
     else:
-        os.system("clear")
+        clear_screen()
         print("Opção inválida.")
