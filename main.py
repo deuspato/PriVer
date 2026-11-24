@@ -13,9 +13,11 @@ templateFile = {
 
 registroFile = templateFile.copy()
 
+
 def clear_screen():
     os.system("cls") if os.name == "nt" else os.system("clear")
-    
+
+
 clear_screen()
 while registroFile["executando"]:
     print("\n--- VERSIONADOR 3D (SEM FUNÇÕES) ---")
@@ -37,34 +39,24 @@ while registroFile["executando"]:
                 registroFile["caminho_origem"] = caminho_normalizado
 
                 nome_completo = os.path.basename(caminho_normalizado)
-
                 nome_base, extensao = os.path.splitext(nome_completo)
-                registroFile["nome_base"] = nome_base
+
+                if not registroFile["registro_ativo"]:
+                    registroFile["nome_base"] = nome_base
+
                 registroFile["extensao"] = extensao
 
-                pos_ponto = nome_completo.rfind(".")
-                if pos_ponto != -1:
-                    registroFile["nome_base"] = nome_completo[:pos_ponto]
-                    registroFile["extensao"] = nome_completo[pos_ponto:]
-                else:
-                    registroFile["nome_base"] = nome_completo
-                    registroFile["extensao"] = ""
+                with open(registroFile["caminho_origem"], "rb") as arq_leitura:
+                    conteudo = arq_leitura.read()
 
-                # Operadores de incremento direto nas chaves
                 registroFile["qtd_envios"] += 1
                 registroFile["versao"] += 1
                 registroFile["ultimo_arquivo_salvo"] = (
                     f"v{registroFile['versao']}_{registroFile['nome_base']}{registroFile['extensao']}"
                 )
 
-                # Copia física dos bytes do arquivo 
-                arq_leitura = open(registroFile["caminho_origem"], "rb")
-                conteudo = arq_leitura.read()
-                arq_leitura.close()
-                
-                arq_escrita = open(registroFile["ultimo_arquivo_salvo"], "wb")
-                arq_escrita.write(conteudo)
-                arq_escrita.close()
+                with open(registroFile["ultimo_arquivo_salvo"], "wb") as arq_escrita:
+                    arq_escrita.write(conteudo)
 
                 registroFile["registro_ativo"] = True
                 print(
@@ -80,12 +72,13 @@ while registroFile["executando"]:
         except PermissionError:
             clear_screen()
             print(f"Erro: Sem permissão para ler o arquivo '{caminho}'.")
-        
+
     elif opcao == "2":
         clear_screen()
         if registroFile["registro_ativo"]:
             print(
-                f"Versão: v{registroFile['versao']} | Envios: {registroFile['qtd_envios']} | Arquivo: {registroFile['ultimo_arquivo_salvo']}"
+                f"Versão: v{registroFile['versao']} | Envios: {registroFile['qtd_envios']} | "
+                f"Nome base atual: {registroFile['nome_base']} | Arquivo atual: {registroFile['ultimo_arquivo_salvo']}"
             )
         else:
             print("Nenhum arquivo enviado até o momento.")
@@ -93,18 +86,23 @@ while registroFile["executando"]:
     elif opcao == "3":
         clear_screen()
         if registroFile["registro_ativo"]:
-            novo_nome = input("Digite o novo nome base: ")
+            novo_nome = input("Digite o novo nome base: ").strip()
             if novo_nome != "":
+                arquivo_antigo = registroFile["ultimo_arquivo_salvo"]
+                novo_arquivo = f"v{registroFile['versao']}_{novo_nome}{registroFile['extensao']}"
+
+                if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:
+                    os.rename(arquivo_antigo, novo_arquivo)
+
                 registroFile["nome_base"] = novo_nome
-                print(
-                    f"Próximas versões serão salvas como: v{registroFile['versao'] + 1}_{registroFile['nome_base']}{registroFile['extensao']}"
-                )
+                registroFile["ultimo_arquivo_salvo"] = novo_arquivo
+
+                print(f"Nome base atualizado! Arquivo atual renomeado para: {registroFile['ultimo_arquivo_salvo']}")
         else:
             print("Envie um arquivo antes de atualizar.")
 
     elif opcao == "4":
         clear_screen()
-        # O template brilha aqui: restaura tudo para o padrão em uma linha!
         registroFile = templateFile.copy()
         print("Registros zerados com sucesso.")
 
