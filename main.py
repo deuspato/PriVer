@@ -29,18 +29,18 @@ while registroFile["executando"]:
 
     if opcao == "1":
         clear_screen()
-        caminho = input("Digite o caminho do arquivo (ex: peca.stl): ")
+        caminho = input("Digite o caminho do arquivo (ex: C:\\pasta\\peca.stl): ").strip("\"' ")
 
         try:
             if caminho != "":
-                registroFile["caminho_origem"] = caminho
+                caminho_normalizado = os.path.normpath(caminho)
+                registroFile["caminho_origem"] = caminho_normalizado
 
-                # Extrai nome e extensão usando fatiamento direto
-                pos_barra = caminho.rfind("/")
-                if pos_barra != -1:
-                    nome_completo = caminho[pos_barra + 1 :]
-                else:
-                    nome_completo = caminho
+                nome_completo = os.path.basename(caminho_normalizado)
+
+                nome_base, extensao = os.path.splitext(nome_completo)
+                registroFile["nome_base"] = nome_base
+                registroFile["extensao"] = extensao
 
                 pos_ponto = nome_completo.rfind(".")
                 if pos_ponto != -1:
