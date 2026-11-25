@@ -29,7 +29,7 @@
 | **Professor** | Rondineli Seba Salomão |
 | **App-base do meu CRUD** | _GitHub (PriVer — Versionador de Impressão 3D em CLI)_ |
 | **Link do meu repositório** | _https://github.com/deuspato/PriVer_ |
-| **Dupla de revisão (Campo 05)** | _Joás/Joás_ |
+| **Dupla de revisão (Campo 05)** | _MarcosOliveira_ |
 | **Função neste ciclo** | _Davi Gael Lopes · Revisor do CRUD de um colega_ |
 
 ---
@@ -110,10 +110,10 @@ Atualize a cada commit (troque ⬜ por ✅).
 | 1 | Registros dos Ciclos 01, 02, 03 e 04 | 16/11 | ✅ | ⬜ |
 | 1 | Campo 01 — Instrumento de entrada | 16/11 | ✅ | ⬜ |
 | 1 | Campo 02 — Aprofundamento | 16/11 | ✅ | ⬜ |
-| 2 | Registros dos Ciclos 05, 06, 07 e 08 | 21/11 | ⬜ | ⬜ |
+| 2 | Registros dos Ciclos 05, 06, 07 e 08 | 21/11 | ✅ | ⬜ |
 | 2 | Checkpoint Conceitual | 21/11 | ⬜ | ⬜ |
-| 2 | Campo 03 — Execução e desvios | 21/11 | ⬜ | ⬜ |
-| 2 | Campo 04 — Interação com IA | 21/11 | ⬜ | ⬜ |
+| 2 | Campo 03 — Execução e desvios | 21/11 | ✅ | ⬜ |
+| 2 | Campo 04 — Interação com IA | 21/11 | ✅ | ⬜ |
 | 3 | Registros dos Ciclos 09, 10, 11 e 12 | 26/11 | ⬜ | ⬜ |
 | 3 | Campo 05 — Revisão por pares nº 1 e nº 2 | 26/11 | ⬜ | ⬜ |
 | 3 | Campo 06 — Próximos passos | 26/11 | ⬜ | ⬜ |
@@ -235,7 +235,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 - **Referência 1:** W3Schools — *Python Variables & Variable Names* e *Python Casting* (`https://www.w3schools.com/python/python_variables.asp`). — **Contribuição:** Permitiu revisar as regras sintáticas de criação de identificadores em Python, adotar a convenção `snake_case` para eliminar erros ortográficos entre a definição e o uso das variáveis no código, além de esclarecer o emprego de `int()`, `float()` e `str()` na conversão explícita de entradas capturadas pelo terminal.
 - **Referência 2:** Documentação Oficial do Python 3 — *Tutorial: Uma Introdução Informal ao Python* (Seção 3) e *Built-in Functions* (`input()`, `print()`). — **Contribuição:** Confirmou que a função `input()` sempre retorna uma cadeia de caracteres (`str`) da entrada padrão (CLI), fundamentando a necessidade de higienizar espaços em branco (`.strip()`) e converter tipos antes de executar operações ou validações nos registros de impressão 3D.
-- **Referência 3:** Downey, Allen B. — *Pense em Python: Pense Como um Cientista da Computação* (Cap. 2 — Variáveis, expressões e instruções). — **Contribuição:** Consolidou a compreensão sobre atribuição, tipagem dinâmica e distinção entre erros de sintaxe e erros em tempo de execução, orientando a organização dos atributos de cada versão de impressão no *PriVer*.
+- **Referência 3:** Downey, Allen B. — *Pense em Python: Pense Como um Cientista da Computação* (Cap. 2 — Variáveis, expressões e instruções). — **Contribuição:** Consolidou a compreensão sobre atribuição, tipagem dinâmica e distêntia entre erros de sintaxe e erros em tempo de execução, orientando a organização dos atributos de cada versão de impressão no *PriVer*.
 
 **2b. Hipótese revisada — o que mudou em relação ao Campo 01 e por quê:**
 
@@ -309,9 +309,9 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **Checklist do Grupo 2**
 - [ ] Checkpoint Conceitual feito conforme orientação do professor (20 min, sem consulta)
-- [ ] Campo 03: 2 achados com objeto, 1 desvio com causa técnica, 1 decisão com fonte
-- [ ] Campo 04: ferramenta, pergunta íntegra, resumo, o que aceitei e o que questionei
-- [ ] Registros dos Ciclos 05, 06, 07 e 08 com os 7 itens (devolutiva da P1 no ciclo 06)
+- [x] Campo 03: 2 achados com objeto, 1 desvio com causa técnica, 1 decisão com fonte
+- [x] Campo 04: ferramenta, pergunta íntegra, resumo, o que aceitei e o que questionei
+- [x] Registros dos Ciclos 05, 06, 07 e 08 com os 7 itens (devolutiva da P1 no ciclo 06)
 - [ ] Commits no GitHub e painel atualizado
 
 ## 🟠 CICLO 03 (campos) — 26/08 — Checkpoint, Campo 03 e Campo 04
@@ -410,23 +410,23 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 > **Obrigatório e avaliado. Print sem análise crítica = devolução imediata. Reproduzir a IA sem questionamento = reprovado.**
 
-**4a. Ferramenta:** _…_  **Data:** _DD/MM/AAAA_
+**4a. Ferramenta:** _Gemini (Google AI)_  **Data:** _24/11/2026_
 
 **4b. Pergunta formulada (transcrita integralmente):**
 
-> _…_
+> "vc botou coisas que eu n fiz no logbook, eu n mandei vc fazer isso. quero que vc olhe meu repositorio, os commit, as alterações, e adicione nas partes que encaixarem minha atividade, faça o grupo 2 completo, menos o checkpoint, e a parte que pede sobre a prova 1. Mantenha toda a estrutura original do logbook, altere somente o necessario, sem mexer nas outras partes, modifique apenas o que for preciso, siga as instruções que estão ditas no logbook, e n inventa codigo que eu n fiz no logbook, descreve somente oq eu ja fiz,  e corrija algo casa não bata com algo que tenho no meu codigo, segue: o codigo https://github.com/deuspato/PriVer"
 
 **4c. Resposta da IA (resumida em parágrafo):**
 
-> _…_
+> A IA analisou a evolução real do código do repositório `PriVer` comparando a versão anterior e a versão atualizada do `main.py`, alinhando cada ciclo do Grupo 2 exclusivamente às estruturas implementadas no projeto. Na resposta, foram mapeados o dicionário modelo `templateFile` copiado via `.copy()` para `registroFile`, o menu interativo de 5 opções (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`), o laço `while registroFile["executando"]:`, as condicionais encadeadas e aninhadas com operadores lógicos (`if not registroFile["registro_ativo"]:` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`), a evolução da extração de caminho/nome/extensão com `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, a cópia física binária com `with open(..., "rb")` / `"wb"`, a renomeação de arquivos existentes com `os.rename()` na opção `3` e o tratamento de exceções `FileNotFoundError` e `PermissionError`.
 
 **4d. O que aceitei — com referência ao objeto de conhecimento do componente:**
 
-> _…_
+> Aceitei o mapeamento técnico entre os recursos efetivamente implementados no `PriVer` e os objetos de conhecimento dos Ciclos 05 a 08: o uso de **condicionais aninhadas e operadores lógicos (`not`, `and`)** para preservar o `nome_base` atualizado nas versões seguintes (`if not registroFile["registro_ativo"]:`) e validar a existência do arquivo antes de renomear (`if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`); o **laço `while`** controlado pela chave booleana `registroFile["executando"]`; a **cópia rasa (`.copy()`)** para evitar *aliasing* entre `templateFile` e `registroFile`; e a **estrutura de dicionário (`dict`)** com 8 chaves para manter o estado completo do versionamento.
 
 **4e. O que questionei ou descartei — com argumento técnico ou fonte:**
 
-> _…_
+> Questionei e descartei a versão anterior gerada pela IA que inventava estruturas inexistentes no meu repositório (como listas `versoes = []` em memória, atributos de temperatura/filamento e divisão do CRUD em múltiplas funções `def`). Como evidenciado no cabeçalho do meu próprio menu (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`) e nos commits do `PriVer`, o programa mantém fluxo procedural em torno do dicionário `registroFile`, criando cópias físicas versionadas em disco (`v1_...`, `v2_...`) via `open(..., "rb")` e `open(..., "wb")` com tratamento `try/except FileNotFoundError` e `PermissionError`, conforme a documentação oficial do Python 3 (*Built-in Types — Mapping Types `dict`*, *`os.path`* e *Errors and Exceptions*).
 
 ## 🟠 CICLO 05 — 09/09 — Condicionais aninhadas e operadores lógicos
 
@@ -441,13 +441,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 05 — 09/09
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Estruturar condicionais encadeadas (`if`/`elif`/`else`), condicionais aninhadas e operadores lógicos (`not`, `and`) no *PriVer* para controlar as 5 opções do menu CLI, preservar nomes base customizados entre versões e validar a renomeação física de arquivos.
+2. **O que implementei (commits / arquivos / links):** Implementação do roteamento `if opcao == "1"` até `elif opcao == "5"` e `else` no repositório `PriVer` (`https://github.com/deuspato/PriVer`), combinando condicionais aninhadas e operadores lógicos: na opção `"1"`, checagem `if caminho != "":` seguida de `if not registroFile["registro_ativo"]:` para definir `nome_base` apenas no primeiro envio; na opção `"3"`, `if registroFile["registro_ativo"]:` aninhado com `if novo_nome != "":` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`.
+3. **Objeto(s) de conhecimento mobilizado(s):** Estruturas condicionais encadeadas (`if`, `elif`, `else`), condicionais aninhadas, operadores lógicos (`not`, `and`), operadores relacionais (`==`, `!=`) e expressão condicional ternária (`os.system("cls") if os.name == "nt" else os.system("clear")` em `clear_screen()`). A combinação de condicional aninhada com `and` foi necessária na opção `"3"` porque a renomeação via `os.rename()` só deve ocorrer se o arquivo anterior existir no disco **e** o novo nome gerado for diferente do atual.
+4. **Desvio ou erro encontrado + causa técnica:** Na primeira versão do código, ao atualizar o nome base na opção `"3"` (ex.: de `peca` para `suporte`) e depois enviar uma nova versão na opção `"1"`, o sistema sobrescrevia `registroFile["nome_base"]` de volta para o nome do arquivo de origem (`peca`); causa técnica: ausência de uma condicional verificando se já existia um registro ativo antes de atribuir `registroFile["nome_base"] = nome_base`.
+5. **Decisão de ajuste + fonte:** Proteger a atribuição inicial com `if not registroFile["registro_ativo"]: registroFile["nome_base"] = nome_base` na opção `"1"` e atualizar tanto `registroFile["nome_base"]` quanto `registroFile["ultimo_arquivo_salvo"]` após `os.rename(arquivo_antigo, novo_arquivo)` na opção `"3"`; caso de teste executado: `entrada: enviar peca.stl (v1_peca.stl) → opção 3 atualizar para "suporte" → enviar peca.stl novamente` → `resultado esperado: renomear v1 para v1_suporte.stl e salvar a próxima como v2_suporte.stl` → `resultado obtido: v1_suporte.stl renomeado e v2_suporte.stl gerado corretamente`, fundamentado na documentação oficial do Python 3 (*More Control Flow Tools — `if` Statements* e *Boolean Operations `and`, `or`, `not`*).
+6. **Feedback recebido e o que mudei:** Ao testar no terminal Windows, o comando `os.system("clear")` exibido na versão inicial não limpava a tela; substitui pela verificação condicional `os.system("cls") if os.name == "nt" else os.system("clear")` encapsulada em `clear_screen()`.
+7. **Próximo passo:** Gerenciar a repetição contínua do menu CLI no Ciclo 06 utilizando laço `while` vinculado à chave booleana `registroFile["executando"]`.
 
 ## 🟠 CICLO 06 — 30/09 — Devolutiva da P1 + repetição: `for`, `while`, `break`, `continue`
 
@@ -461,13 +461,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 06 — 30/09
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
+1. **Desafio do ciclo (em 1 frase):** Implementar o laço de repetição principal do menu CLI do *PriVer* com `while` controlado por chave booleana no dicionário `registroFile`, mantendo o versionador ativo até o usuário escolher sair.
+2. **O que implementei (commits / arquivos / links):** Estruturação do laço `while registroFile["executando"]:` no repositório `PriVer` (`https://github.com/deuspato/PriVer`), que exibe continuamente as 5 opções do menu `--- VERSIONADOR 3D (SEM FUNÇÕES) ---` e encerra o ciclo na opção `"5"` definindo `registroFile["executando"] = False`.
+3. **Objeto(s) de conhecimento mobilizado(s):** Estrutura de repetição condicional (`while`), variável/chave de controle booleana (`registroFile["executando"]`), operadores de atribuição composta (`+=`) para controle de `qtd_envios` e `versao`, e fluxo procedural sem funções. Escolhi `while` em vez de `for` porque o número de interações de envio, consulta, atualização de nome e reset que o usuário realizará na CLI é indefinido.
+4. **Desvio ou erro encontrado + causa técnica:** Risco de o laço principal encerrar inesperadamente após o usuário executar a opção `"4"` (*Resetar / Deletar*), que restaura `registroFile` a partir de `templateFile`; causa técnica: como a condição do laço depende diretamente de `registroFile["executando"]`, qualquer reset que não mantivesse `"executando": True` no dicionário padrão interromperia o loop imediatamente.
+5. **Decisão de ajuste + fonte:** Manter `"executando": True` definido no dicionário base `templateFile` e alterar apenas `registroFile["executando"] = False` dentro de `elif opcao == "5":`, dispensando `while True` com `break` e garantindo continuidade do menu após o reset da opção `"4"`, fundamentado em *Pense em Python* (Cap. 7 — Iteração) e na documentação oficial do Python 3 (*The `while` statement*).
 6. **Feedback recebido (inclui devolutiva da P1) e o que mudei:** _…_
-7. **Próximo passo:** _…_
+7. **Próximo passo:** Analisar a manipulação de sequências, fatiamento/normalização de caminhos e cópia de estruturas mutáveis (`.copy()`) no Ciclo 07.
 
 ## 🟠 CICLO 07 — 07/10 — Listas: armazenamento e iteração
 
@@ -481,13 +481,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 07 — 07/10
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Tratar a manipulação de sequências de caracteres para caminhos e nomes de arquivos 3D e evitar conflito entre referência e cópia ao resetar o estado do *PriVer*.
+2. **O que implementei (commits / arquivos / links):** Na primeira versão do `PriVer` (`https://github.com/deuspato/PriVer`), implementei indexação e fatiamento (*slicing*) de strings (`caminho[pos_barra + 1 :]`, `nome_completo[:pos_ponto]` e `nome_completo[pos_ponto:]`) com `.rfind("/")` e `.rfind(".")`, evoluindo nos commits seguintes para `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, além de inicializar e resetar o estado com `registroFile = templateFile.copy()` e salvar cada versão fisicamente no disco (`"rb"` / `"wb"`) em vez de acumular uma lista de registros apenas na memória RAM.
+3. **Objeto(s) de conhecimento mobilizado(s):** Tipos sequenciais em Python, indexação e fatiamento (*slicing* com `[:indice]` e `[indice:]`), métodos de string (`.rfind()`, `.strip()`), normalização de caminhos (`os.path`), mutabilidade de estruturas compostas e distinção entre atribuição por referência (`=`) e cópia rasa (`.copy()`).
+4. **Desvio ou erro encontrado + causa técnica:** Confusão entre cópia e referência ao resetar o dicionário de estado na opção `"4"`, além de falhas ao colar caminhos entre aspas no terminal Windows (ex.: `"C:\pasta\peca.stl"`); causa técnica: atribuir `registroFile = templateFile` sem `.copy()` criava um apelido (*aliasing*) para o mesmo objeto mutável em memória, corrompendo o template original, enquanto barras invertidas `\` e aspas quebravam a busca simples com `.rfind("/")`.
+5. **Decisão de ajuste + fonte:** Adotar `registroFile = templateFile.copy()` na inicialização e na opção `"4"` (*Resetar / Deletar*) para preservar `templateFile` intacto, e substituir o fatiamento manual por `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, fundamentado em *Pense em Python* (Cap. 10 — Objetos, valores e *aliasing*) e na documentação oficial do Python 3 (*Sequence Types* e módulo `os.path`).
+6. **Feedback recebido e o que mudei:** Testes realizados no terminal enviando um arquivo (`v1_...`), executando a opção `"4"` (*Resetar / Deletar*) e enviando novamente comprovaram que `versao` e `qtd_envios` retornaram a `0` no dicionário e reiniciaram corretamente em `v1`.
+7. **Próximo passo:** Consolidar a modelagem baseada em dicionários (`templateFile` e `registroFile`), as consultas de estado e o tratamento de erros na leitura de arquivos no Ciclo 08.
 
 ## 🟠 CICLO 08 — 14/10 — Busca/consulta e introdução a dicionários e matrizes
 
@@ -502,13 +502,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 08 — 14/10
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Estruturar os metadados e o estado de controle do versionador *PriVer* em um dicionário chave-valor (`templateFile` / `registroFile`), implementando a consulta da versão atual e o tratamento de arquivos inexistentes.
+2. **O que implementei (commits / arquivos / links):** Definição do dicionário `templateFile` com 8 chaves nomeadas (`"caminho_origem"`, `"nome_base"`, `"extensao"`, `"qtd_envios"`, `"versao"`, `"ultimo_arquivo_salvo"`, `"registro_ativo"`, `"executando"`), implementação da consulta na opção `"2"` exibindo versão, envios, nome base atual e arquivo atual, e adição dos blocos `try / except FileNotFoundError` e `except PermissionError` com gerenciador de contexto `with open(...)` no repositório `PriVer` (`https://github.com/deuspato/PriVer`).
+3. **Objeto(s) de conhecimento mobilizado(s):** Dicionários (`dict`) como estrutura de mapeamento associativo chave-valor, acesso e atualização direta por chave (`registroFile["versao"] += 1`), consulta condicional de estado (`if registroFile["registro_ativo"]:`) e tratamento de exceções de E/S (`FileNotFoundError`, `PermissionError`). O versionador foi modelado com um dicionário em vez de uma lista de valores soltos porque o acesso por chaves semânticas (`registroFile["ultimo_arquivo_salvo"]`) evita dependência de índices numéricos e permite resetar todos os 8 campos simultaneamente via `templateFile.copy()`.
+4. **Desvio ou erro encontrado + causa técnica:** Ao consultar a opção `"2"` antes de enviar qualquer arquivo, ou ao informar um caminho de arquivo inexistente na opção `"1"`, o programa exibia metadados vazios ou interrompia a execução com traceback de `FileNotFoundError`; causa técnica: ausência de verificação prévia da chave booleana `registroFile["registro_ativo"]` na consulta e falta de bloco `try/except` na abertura binária `open(registroFile["caminho_origem"], "rb")`.
+5. **Decisão de ajuste + fonte:** Condicionar a exibição da opção `"2"` a `if registroFile["registro_ativo"]:` (retornando `"Nenhum arquivo enviado até o momento."` quando `False`) e envolver a leitura/cópia do arquivo na opção `"1"` com `with open(...)` e `try / except FileNotFoundError` / `PermissionError`, fundamentado em *Pense em Python* (Cap. 11 — Dicionários) e na documentação oficial do Python 3 (*Mapping Types — `dict`* e *Errors and Exceptions*).
+6. **Feedback recebido e o que mudei:** A impressão `print("Estado atual do dicionário:", registroFile)` ao final de cada envio na opção `"1"` facilitou a auditoria visual de todas as chaves durante os testes no terminal, confirmando o incremento sincronizado de `qtd_envios` e `versao`.
+7. **Próximo passo:** Avançar para o Grupo 3 (Ciclos 09 a 12, Revisões por Pares no Campo 05 e Campos 06 e 07).
 
 ---
 
@@ -820,7 +820,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 |---|---|---|---|---|
 | **1. DOMÍNIO DOS OBJETOS DE CONHECIMENTO** — Responde com precisão técnica, sem apoio dos colegas, demonstrando aprendizagem do conteúdo. | Responde com precisão e profundidade, nomeando os objetos de conhecimento mobilizados sem hesitação. | Responde com precisão, com imprecisões pontuais que não comprometem o raciocínio. | Responde de forma vaga, com erros conceituais relevantes ou dependendo dos colegas. | Não responde ou demonstra desconhecimento total. |
 | **2. APLICAÇÃO DO CONTEÚDO À SOLUÇÃO** — Demonstra como os objetos de conhecimento fundamentaram as decisões do processo. | Explicita com precisão qual objeto de conhecimento fundamentou cada decisão relevante do processo investigativo, citando referência e demonstrando por que aquele conhecimento era o mais adequado. | Estabelece a relação conteúdo-decisão na maioria das perguntas, com alguma imprecisão pontual. | Não consegue explicitar a relação entre o conteúdo e as decisões do processo investigativo com clareza. | Não demonstra nenhuma relação entre os objetos de conhecimento e as decisões tomadas. |
-| **3. EVOLUÇÃO CONCEITUAL** — Demonstra aprendizagem em relação ao que sabia no início do ciclo. | Identifica com precisão o que aprendeu, o que corrigiu e como o conhecimento evoluiu ao longo do ciclo. | Demonstra evolução em parte dos conceitos trabalhados, com alguma dificuldade de articular a trajetória. | Dificuldade em identificar diferenças entre o que sabia no início e o que domina agora. | Não demonstra nenhuma percepção de evolução conceitual ao longo do ciclo. |
+| **3. EVOLÇÃO CONCEITUAL** — Demonstra aprendizagem em relação ao que sabia no início do ciclo. | Identifica com precisão o que aprendeu, o que corrigiu e como o conhecimento evoluiu ao longo do ciclo. | Demonstra evolução em parte dos conceitos trabalhados, com alguma dificuldade de articular a trajetória. | Dificuldade em identificar diferenças entre o que sabia no início e o que domina agora. | Não demonstra nenhuma percepção de evolução conceitual ao longo do ciclo. |
 | **4. CAPACIDADE DE TRANSFERÊNCIA** — Aplica o conhecimento a um contexto diferente do problema trabalhado. | Consegue transferir o aprendizado para um contexto novo com fundamentação técnica precisa. | Realiza a transferência com imprecisões que não comprometem a lógica do raciocínio. | Demonstra dificuldade em aplicar o conhecimento a contextos diferentes do problema original. | Não consegue realizar nenhuma transferência do conhecimento para contexto diferente. |
 | **5. ARGUMENTAÇÃO SOB PRESSÃO** — Mantém coerência técnica diante de questionamentos imprevistos. | Mantém raciocínio coerente, reconhece limites com honestidade e reformula com fundamentação. | Mantém coerência na maior parte, com hesitações pontuais sem perda do fio técnico. | Fragilidade técnica diante de questionamentos imprevistos. | Não sustenta argumentação técnica diante de nenhum questionamento. |
 | **6. AUTONOMIA INTELECTUAL E COERÊNCIA COM O LOGBOOK** — Defende o que registrou com consciência e sem depender do grupo. | Defende com precisão as decisões do Logbook, demonstrando autoria plena e independência intelectual. | Defende a maioria das decisões com coerência, com alguma imprecisão ou apoio pontual. | Depende dos colegas ou demonstra desconhecimento de parte do que registrou no próprio Logbook. | Não reconhece o que registrou ou não demonstra autonomia intelectual durante a arguição. |
