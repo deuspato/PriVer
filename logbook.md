@@ -114,10 +114,10 @@ Atualize a cada commit (troque ⬜ por ✅).
 | 2 | Checkpoint Conceitual | 21/11 | ⬜ | ⬜ |
 | 2 | Campo 03 — Execução e desvios | 21/11 | ✅ | ⬜ |
 | 2 | Campo 04 — Interação com IA | 21/11 | ✅ | ⬜ |
-| 3 | Registros dos Ciclos 09, 10, 11 e 12 | 26/11 | ⬜ | ⬜ |
-| 3 | Campo 05 — Revisão por pares nº 1 e nº 2 | 26/11 | ⬜ | ⬜ |
-| 3 | Campo 06 — Próximos passos | 26/11 | ⬜ | ⬜ |
-| 3 | Campo 07 — Evolução conceitual | 26/11 | ⬜ | ⬜ |
+| 3 | Registros dos Ciclos 09, 10, 11 e 12 | 26/11 | ✅ | ⬜ |
+| 3 | Campo 05 — Revisão por pares nº 1 e nº 2 | 26/11 | ✅ | ⬜ |
+| 3 | Campo 06 — Próximos passos | 26/11 | ✅ | ⬜ |
+| 3 | Campo 07 — Evolução conceitual | 26/11 | ✅ | ⬜ |
 | 🏁 | Defesa Técnica | 18/11 | ⬜ | — |
 
 ---
@@ -235,7 +235,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 - **Referência 1:** W3Schools — *Python Variables & Variable Names* e *Python Casting* (`https://www.w3schools.com/python/python_variables.asp`). — **Contribuição:** Permitiu revisar as regras sintáticas de criação de identificadores em Python, adotar a convenção `snake_case` para eliminar erros ortográficos entre a definição e o uso das variáveis no código, além de esclarecer o emprego de `int()`, `float()` e `str()` na conversão explícita de entradas capturadas pelo terminal.
 - **Referência 2:** Documentação Oficial do Python 3 — *Tutorial: Uma Introdução Informal ao Python* (Seção 3) e *Built-in Functions* (`input()`, `print()`). — **Contribuição:** Confirmou que a função `input()` sempre retorna uma cadeia de caracteres (`str`) da entrada padrão (CLI), fundamentando a necessidade de higienizar espaços em branco (`.strip()`) e converter tipos antes de executar operações ou validações nos registros de impressão 3D.
-- **Referência 3:** Downey, Allen B. — *Pense em Python: Pense Como um Cientista da Computação* (Cap. 2 — Variáveis, expressões e instruções). — **Contribuição:** Consolidou a compreensão sobre atribuição, tipagem dinâmica e distêntia entre erros de sintaxe e erros em tempo de execução, orientando a organização dos atributos de cada versão de impressão no *PriVer*.
+- **Referência 3:** Downey, Allen B. — *Pense em Python: Pense Como um Cientista da Computação* (Cap. 2 — Variáveis, expressões e instruções). — **Contribuição:** Consolidou a compreensão sobre atribuição, tipagem dinâmica e distinção entre erros de sintaxe e erros em tempo de execução, orientando a organização dos atributos de cada versão de impressão no *PriVer*.
 
 **2b. Hipótese revisada — o que mudou em relação ao Campo 01 e por quê:**
 
@@ -418,15 +418,15 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **4c. Resposta da IA (resumida em parágrafo):**
 
-> A IA analisou a evolução real do código do repositório `PriVer` comparando a versão anterior e a versão atualizada do `main.py`, alinhando cada ciclo do Grupo 2 exclusivamente às estruturas implementadas no projeto. Na resposta, foram mapeados o dicionário modelo `templateFile` copiado via `.copy()` para `registroFile`, o menu interativo de 5 opções (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`), o laço `while registroFile["executando"]:`, as condicionais encadeadas e aninhadas com operadores lógicos (`if not registroFile["registro_ativo"]:` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`), a evolução da extração de caminho/nome/extensão com `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, a cópia física binária com `with open(..., "rb")` / `"wb"`, a renomeação de arquivos existentes com `os.rename()` na opção `3` e o tratamento de exceções `FileNotFoundError` e `PermissionError`.
+> A IA comparou a primeira e a segunda versão do código-fonte real do repositório `PriVer` (`main.py`), alinhando os registros do Logbook estritamente às estruturas que eu implementei nos meus commits. Na análise, a ferramenta mapeou o dicionário modelo `templateFile` copiado via `.copy()` para `registroFile`, o menu interativo de 5 opções (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`), o laço `while registroFile["executando"]:`, as condicionais aninhadas com operadores lógicos (`if not registroFile["registro_ativo"]:` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`), a evolução do tratamento de caminhos com `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, a cópia física binária via `with open(..., "rb")` / `"wb"`, a renomeação física com `os.rename()` na opção `3` e o tratamento de exceções `FileNotFoundError` e `PermissionError`.
 
 **4d. O que aceitei — com referência ao objeto de conhecimento do componente:**
 
-> Aceitei o mapeamento técnico entre os recursos efetivamente implementados no `PriVer` e os objetos de conhecimento dos Ciclos 05 a 08: o uso de **condicionais aninhadas e operadores lógicos (`not`, `and`)** para preservar o `nome_base` atualizado nas versões seguintes (`if not registroFile["registro_ativo"]:`) e validar a existência do arquivo antes de renomear (`if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`); o **laço `while`** controlado pela chave booleana `registroFile["executando"]`; a **cópia rasa (`.copy()`)** para evitar *aliasing* entre `templateFile` e `registroFile`; e a **estrutura de dicionário (`dict`)** com 8 chaves para manter o estado completo do versionamento.
+> Aceitei a vinculação rigorosa entre os elementos reais do meu código no `PriVer` e os objetos de conhecimento da disciplina: o uso de **condicionais aninhadas e operadores lógicos (`not`, `and`)** para preservar o `nome_base` editado nos envios seguintes (`if not registroFile["registro_ativo"]:`) e validar a existência do arquivo antes de renomear (`if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`); o **laço `while`** controlado pela chave booleana `registroFile["executando"]`; a **cópia rasa (`.copy()`)** para evitar *aliasing* entre `templateFile` e `registroFile`; e a **estrutura de dicionário (`dict`)** com 8 chaves para manter o estado do versionador.
 
 **4e. O que questionei ou descartei — com argumento técnico ou fonte:**
 
-> Questionei e descartei a versão anterior gerada pela IA que inventava estruturas inexistentes no meu repositório (como listas `versoes = []` em memória, atributos de temperatura/filamento e divisão do CRUD em múltiplas funções `def`). Como evidenciado no cabeçalho do meu próprio menu (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`) e nos commits do `PriVer`, o programa mantém fluxo procedural em torno do dicionário `registroFile`, criando cópias físicas versionadas em disco (`v1_...`, `v2_...`) via `open(..., "rb")` e `open(..., "wb")` com tratamento `try/except FileNotFoundError` e `PermissionError`, conforme a documentação oficial do Python 3 (*Built-in Types — Mapping Types `dict`*, *`os.path`* e *Errors and Exceptions*).
+> Questionei e descartei a geração anterior da IA porque ela inventava estruturas que não existem no meu repositório (como listas `versoes = []` em memória, atributos de filamento/temperatura e decomposição do CRUD em várias funções `def`). Como evidenciado pelo próprio cabeçalho do meu menu (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`) e pelos commits do `PriVer`, meu código mantém execução procedural em torno do dicionário `registroFile` (com apenas a função utilitária `clear_screen()`), realizando cópias físicas versionadas em disco (`v1_...`, `v2_...`) com gerenciador de contexto `with open(..., "rb")` / `"wb"` e tratamento `try/except FileNotFoundError` e `PermissionError`, conforme a documentação oficial do Python 3 (*Mapping Types — `dict`*, *`os.path`* e *Errors and Exceptions*).
 
 ## 🟠 CICLO 05 — 09/09 — Condicionais aninhadas e operadores lógicos
 
@@ -442,11 +442,11 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 05 — 09/09
 1. **Desafio do ciclo (em 1 frase):** Estruturar condicionais encadeadas (`if`/`elif`/`else`), condicionais aninhadas e operadores lógicos (`not`, `and`) no *PriVer* para controlar as 5 opções do menu CLI, preservar nomes base customizados entre versões e validar a renomeação física de arquivos.
-2. **O que implementei (commits / arquivos / links):** Implementação do roteamento `if opcao == "1"` até `elif opcao == "5"` e `else` no repositório `PriVer` (`https://github.com/deuspato/PriVer`), combinando condicionais aninhadas e operadores lógicos: na opção `"1"`, checagem `if caminho != "":` seguida de `if not registroFile["registro_ativo"]:` para definir `nome_base` apenas no primeiro envio; na opção `"3"`, `if registroFile["registro_ativo"]:` aninhado com `if novo_nome != "":` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`.
-3. **Objeto(s) de conhecimento mobilizado(s):** Estruturas condicionais encadeadas (`if`, `elif`, `else`), condicionais aninhadas, operadores lógicos (`not`, `and`), operadores relacionais (`==`, `!=`) e expressão condicional ternária (`os.system("cls") if os.name == "nt" else os.system("clear")` em `clear_screen()`). A combinação de condicional aninhada com `and` foi necessária na opção `"3"` porque a renomeação via `os.rename()` só deve ocorrer se o arquivo anterior existir no disco **e** o novo nome gerado for diferente do atual.
-4. **Desvio ou erro encontrado + causa técnica:** Na primeira versão do código, ao atualizar o nome base na opção `"3"` (ex.: de `peca` para `suporte`) e depois enviar uma nova versão na opção `"1"`, o sistema sobrescrevia `registroFile["nome_base"]` de volta para o nome do arquivo de origem (`peca`); causa técnica: ausência de uma condicional verificando se já existia um registro ativo antes de atribuir `registroFile["nome_base"] = nome_base`.
-5. **Decisão de ajuste + fonte:** Proteger a atribuição inicial com `if not registroFile["registro_ativo"]: registroFile["nome_base"] = nome_base` na opção `"1"` e atualizar tanto `registroFile["nome_base"]` quanto `registroFile["ultimo_arquivo_salvo"]` após `os.rename(arquivo_antigo, novo_arquivo)` na opção `"3"`; caso de teste executado: `entrada: enviar peca.stl (v1_peca.stl) → opção 3 atualizar para "suporte" → enviar peca.stl novamente` → `resultado esperado: renomear v1 para v1_suporte.stl e salvar a próxima como v2_suporte.stl` → `resultado obtido: v1_suporte.stl renomeado e v2_suporte.stl gerado corretamente`, fundamentado na documentação oficial do Python 3 (*More Control Flow Tools — `if` Statements* e *Boolean Operations `and`, `or`, `not`*).
-6. **Feedback recebido e o que mudei:** Ao testar no terminal Windows, o comando `os.system("clear")` exibido na versão inicial não limpava a tela; substitui pela verificação condicional `os.system("cls") if os.name == "nt" else os.system("clear")` encapsulada em `clear_screen()`.
+2. **O que implementei (commits / arquivos / links):** Implementação do roteamento `if opcao == "1"` até `elif opcao == "5"` e `else` no repositório `PriVer` (`https://github.com/deuspato/PriVer`), combinando condicionais aninhadas e operadores lógicos: na opção `"1"`, checagem `if caminho != "":` seguida de `if not registroFile["registro_ativo"]:` para fixar `nome_base` apenas no primeiro envio; na opção `"3"`, `if registroFile["registro_ativo"]:` aninhado com `if novo_nome != "":` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`.
+3. **Objeto(s) de conhecimento mobilizado(s):** Estruturas condicionais encadeadas (`if`, `elif`, `else`), condicionais aninhadas, operadores lógicos (`not`, `and`), operadores relacionais (`==`, `!=`) e expressão condicional ternária (`os.system("cls") if os.name == "nt" else os.system("clear")` em `clear_screen()`). A combinação de condicional aninhada com `and` foi escolhida na opção `"3"` porque a renomeação física via `os.rename()` só deve ocorrer se o arquivo anterior existir no disco **e** o novo nome gerado for diferente do atual.
+4. **Desvio ou erro encontrado + causa técnica:** Na primeira versão do código, ao atualizar o nome base na opção `"3"` (ex.: de `peca` para `suporte`) e realizar um novo envio na opção `"1"`, o programa voltava para o nome antigo do arquivo de origem; causa técnica: ausência de uma condicional verificando se já existia um registro ativo antes de atribuir `registroFile["nome_base"] = nome_base`, além de não renomear o arquivo já salvo em disco.
+5. **Decisão de ajuste + fonte:** Proteger a atribuição inicial com `if not registroFile["registro_ativo"]: registroFile["nome_base"] = nome_base` na opção `"1"` e executar `os.rename(arquivo_antigo, novo_arquivo)` atualizando `registroFile["ultimo_arquivo_salvo"]` na opção `"3"`; caso de teste executado: `entrada: enviar peca.stl (v1_peca.stl) -> opção 3 atualizar para "suporte" -> enviar peca.stl novamente` $\rightarrow$ `resultado esperado: renomear v1 para v1_suporte.stl e salvar o novo envio como v2_suporte.stl` $\rightarrow$ `resultado obtido: v1_suporte.stl renomeado e v2_suporte.stl criado`, fundamentado na documentação oficial do Python 3 (*More Control Flow Tools — `if` Statements* e *Boolean Operations `and`, `or`, `not`*).
+6. **Feedback recebido e o que mudei:** Na revisão por pares do colega **Marcos Oliveira (`@SantX0`)**, ele apontou que `os.system("clear")` falhava no Windows e que o nome atualizado na opção 3 voltava ao antigo no envio seguinte; implementei `clear_screen()` com `os.name == "nt"` e a guarda `if not registroFile["registro_ativo"]:`.
 7. **Próximo passo:** Gerenciar a repetição contínua do menu CLI no Ciclo 06 utilizando laço `while` vinculado à chave booleana `registroFile["executando"]`.
 
 ## 🟠 CICLO 06 — 30/09 — Devolutiva da P1 + repetição: `for`, `while`, `break`, `continue`
@@ -463,7 +463,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 #### Registro do Ciclo 06 — 30/09
 1. **Desafio do ciclo (em 1 frase):** Implementar o laço de repetição principal do menu CLI do *PriVer* com `while` controlado por chave booleana no dicionário `registroFile`, mantendo o versionador ativo até o usuário escolher sair.
 2. **O que implementei (commits / arquivos / links):** Estruturação do laço `while registroFile["executando"]:` no repositório `PriVer` (`https://github.com/deuspato/PriVer`), que exibe continuamente as 5 opções do menu `--- VERSIONADOR 3D (SEM FUNÇÕES) ---` e encerra o ciclo na opção `"5"` definindo `registroFile["executando"] = False`.
-3. **Objeto(s) de conhecimento mobilizado(s):** Estrutura de repetição condicional (`while`), variável/chave de controle booleana (`registroFile["executando"]`), operadores de atribuição composta (`+=`) para controle de `qtd_envios` e `versao`, e fluxo procedural sem funções. Escolhi `while` em vez de `for` porque o número de interações de envio, consulta, atualização de nome e reset que o usuário realizará na CLI é indefinido.
+3. **Objeto(s) de conhecimento mobilizado(s):** Estrutura de repetição condicional (`while`), variável/chave de controle booleana (`registroFile["executando"]`), operadores de atribuição composta (`+=`) para controle de `qtd_envios` e `versao`, e fluxo procedural. Escolhi `while` em vez de `for` porque a quantidade de interações de envio, consulta, atualização de nome e reset que o usuário realizará na CLI é indefinida.
 4. **Desvio ou erro encontrado + causa técnica:** Risco de o laço principal encerrar inesperadamente após o usuário executar a opção `"4"` (*Resetar / Deletar*), que restaura `registroFile` a partir de `templateFile`; causa técnica: como a condição do laço depende diretamente de `registroFile["executando"]`, qualquer reset que não mantivesse `"executando": True` no dicionário padrão interromperia o loop imediatamente.
 5. **Decisão de ajuste + fonte:** Manter `"executando": True` definido no dicionário base `templateFile` e alterar apenas `registroFile["executando"] = False` dentro de `elif opcao == "5":`, dispensando `while True` com `break` e garantindo continuidade do menu após o reset da opção `"4"`, fundamentado em *Pense em Python* (Cap. 7 — Iteração) e na documentação oficial do Python 3 (*The `while` statement*).
 6. **Feedback recebido (inclui devolutiva da P1) e o que mudei:** _…_
@@ -482,11 +482,11 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 07 — 07/10
 1. **Desafio do ciclo (em 1 frase):** Tratar a manipulação de sequências de caracteres para caminhos e nomes de arquivos 3D e evitar conflito entre referência e cópia ao resetar o estado do *PriVer*.
-2. **O que implementei (commits / arquivos / links):** Na primeira versão do `PriVer` (`https://github.com/deuspato/PriVer`), implementei indexação e fatiamento (*slicing*) de strings (`caminho[pos_barra + 1 :]`, `nome_completo[:pos_ponto]` e `nome_completo[pos_ponto:]`) com `.rfind("/")` e `.rfind(".")`, evoluindo nos commits seguintes para `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, além de inicializar e resetar o estado com `registroFile = templateFile.copy()` e salvar cada versão fisicamente no disco (`"rb"` / `"wb"`) em vez de acumular uma lista de registros apenas na memória RAM.
+2. **O que implementei (commits / arquivos / links):** Na primeira versão do `PriVer` (`https://github.com/deuspato/PriVer`), implementei indexação e fatiamento (*slicing*) de strings (`caminho[pos_barra + 1 :]`, `nome_completo[:pos_ponto]` e `nome_completo[pos_ponto:]`) com `.rfind("/")` e `.rfind(".")`, evoluindo nos commits seguintes para `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, além de inicializar e resetar o estado com `registroFile = templateFile.copy()` e salvar cada versão fisicamente em disco (`"rb"` / `"wb"`) em vez de manter apenas uma lista em memória RAM.
 3. **Objeto(s) de conhecimento mobilizado(s):** Tipos sequenciais em Python, indexação e fatiamento (*slicing* com `[:indice]` e `[indice:]`), métodos de string (`.rfind()`, `.strip()`), normalização de caminhos (`os.path`), mutabilidade de estruturas compostas e distinção entre atribuição por referência (`=`) e cópia rasa (`.copy()`).
-4. **Desvio ou erro encontrado + causa técnica:** Confusão entre cópia e referência ao resetar o dicionário de estado na opção `"4"`, além de falhas ao colar caminhos entre aspas no terminal Windows (ex.: `"C:\pasta\peca.stl"`); causa técnica: atribuir `registroFile = templateFile` sem `.copy()` criava um apelido (*aliasing*) para o mesmo objeto mutável em memória, corrompendo o template original, enquanto barras invertidas `\` e aspas quebravam a busca simples com `.rfind("/")`.
+4. **Desvio ou erro encontrado + causa técnica:** Confusão entre cópia e referência ao resetar o dicionário de estado na opção `"4"`, além de erro ao informar caminhos com barras invertidas do Windows (`\`) ou entre aspas; causa técnica: atribuir `registroFile = templateFile` sem `.copy()` criava um apelido (*aliasing*) para o mesmo objeto mutável em memória, corrompendo o template original, enquanto a busca simples por `.rfind("/")` não reconhecia separadores `\` do Windows.
 5. **Decisão de ajuste + fonte:** Adotar `registroFile = templateFile.copy()` na inicialização e na opção `"4"` (*Resetar / Deletar*) para preservar `templateFile` intacto, e substituir o fatiamento manual por `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`, fundamentado em *Pense em Python* (Cap. 10 — Objetos, valores e *aliasing*) e na documentação oficial do Python 3 (*Sequence Types* e módulo `os.path`).
-6. **Feedback recebido e o que mudei:** Testes realizados no terminal enviando um arquivo (`v1_...`), executando a opção `"4"` (*Resetar / Deletar*) e enviando novamente comprovaram que `versao` e `qtd_envios` retornaram a `0` no dicionário e reiniciaram corretamente em `v1`.
+6. **Feedback recebido e o que mudei:** Na revisão por pares, **Marcos Oliveira (`@SantX0`)** reportou o erro ao passar caminhos com barras invertidas no Windows e recomendou `os.path.basename()` e `os.path.splitext()`; apliquei ambas as funções junto com `os.path.normpath()` e `.strip("\"' ")`.
 7. **Próximo passo:** Consolidar a modelagem baseada em dicionários (`templateFile` e `registroFile`), as consultas de estado e o tratamento de erros na leitura de arquivos no Ciclo 08.
 
 ## 🟠 CICLO 08 — 14/10 — Busca/consulta e introdução a dicionários e matrizes
@@ -505,9 +505,9 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 1. **Desafio do ciclo (em 1 frase):** Estruturar os metadados e o estado de controle do versionador *PriVer* em um dicionário chave-valor (`templateFile` / `registroFile`), implementando a consulta da versão atual e o tratamento de arquivos inexistentes.
 2. **O que implementei (commits / arquivos / links):** Definição do dicionário `templateFile` com 8 chaves nomeadas (`"caminho_origem"`, `"nome_base"`, `"extensao"`, `"qtd_envios"`, `"versao"`, `"ultimo_arquivo_salvo"`, `"registro_ativo"`, `"executando"`), implementação da consulta na opção `"2"` exibindo versão, envios, nome base atual e arquivo atual, e adição dos blocos `try / except FileNotFoundError` e `except PermissionError` com gerenciador de contexto `with open(...)` no repositório `PriVer` (`https://github.com/deuspato/PriVer`).
 3. **Objeto(s) de conhecimento mobilizado(s):** Dicionários (`dict`) como estrutura de mapeamento associativo chave-valor, acesso e atualização direta por chave (`registroFile["versao"] += 1`), consulta condicional de estado (`if registroFile["registro_ativo"]:`) e tratamento de exceções de E/S (`FileNotFoundError`, `PermissionError`). O versionador foi modelado com um dicionário em vez de uma lista de valores soltos porque o acesso por chaves semânticas (`registroFile["ultimo_arquivo_salvo"]`) evita dependência de índices numéricos e permite resetar todos os 8 campos simultaneamente via `templateFile.copy()`.
-4. **Desvio ou erro encontrado + causa técnica:** Ao consultar a opção `"2"` antes de enviar qualquer arquivo, ou ao informar um caminho de arquivo inexistente na opção `"1"`, o programa exibia metadados vazios ou interrompia a execução com traceback de `FileNotFoundError`; causa técnica: ausência de verificação prévia da chave booleana `registroFile["registro_ativo"]` na consulta e falta de bloco `try/except` na abertura binária `open(registroFile["caminho_origem"], "rb")`.
+4. **Desvio ou erro encontrado + causa técnica:** Ao consultar a opção `"2"` antes de enviar qualquer arquivo, ou ao informar o caminho de um arquivo inexistente na opção `"1"`, o programa exibia metadados vazios ou fechava abruptamente com `FileNotFoundError`; causa técnica: ausência de verificação prévia da chave booleana `registroFile["registro_ativo"]` na consulta e falta de bloco `try/except` na abertura binária `open(registroFile["caminho_origem"], "rb")`.
 5. **Decisão de ajuste + fonte:** Condicionar a exibição da opção `"2"` a `if registroFile["registro_ativo"]:` (retornando `"Nenhum arquivo enviado até o momento."` quando `False`) e envolver a leitura/cópia do arquivo na opção `"1"` com `with open(...)` e `try / except FileNotFoundError` / `PermissionError`, fundamentado em *Pense em Python* (Cap. 11 — Dicionários) e na documentação oficial do Python 3 (*Mapping Types — `dict`* e *Errors and Exceptions*).
-6. **Feedback recebido e o que mudei:** A impressão `print("Estado atual do dicionário:", registroFile)` ao final de cada envio na opção `"1"` facilitou a auditoria visual de todas as chaves durante os testes no terminal, confirmando o incremento sincronizado de `qtd_envios` e `versao`.
+6. **Feedback recebido e o que mudei:** Na revisão por pares, **Marcos Oliveira (`@SantX0`)** elogiou a organização do dicionário e apontou a quebra por `FileNotFoundError` ao informar arquivo inexistente; implementei os blocos `try / except FileNotFoundError` e `PermissionError` e refinei a saída da opção `"2"` para incluir `Nome base atual`.
 7. **Próximo passo:** Avançar para o Grupo 3 (Ciclos 09 a 12, Revisões por Pares no Campo 05 e Campos 06 e 07).
 
 ---
@@ -519,11 +519,11 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 > ⚠️ O prazo vem **um dia depois da P2 (25/11)**. Os Campos 06 e 07 dependem de todo o Logbook: deixe-os para o final, mas **adiante o rascunho do 6c e do 7a/7b antes da Defesa (18/11)**.
 
 **Checklist do Grupo 3**
-- [ ] Registros dos Ciclos 09, 10, 11 e 12 com os 7 itens
-- [ ] Campo 05: duas revisões (Ciclos 09 e 12), blocos 5a a 5e
-- [ ] Campo 06: decisão autônoma, lacuna com plano, pergunta da banca com 5 linhas ou mais
-- [ ] Campo 07: 7a a 7e, com 3 objetos, 2 equívocos corrigidos e transferência
-- [ ] Coerência entre Campo 01 e Campo 07
+- [x] Registros dos Ciclos 09, 10, 11 e 12 com os 7 itens
+- [x] Campo 05: duas revisões (Ciclos 09 e 12), blocos 5a a 5e
+- [x] Campo 06: decisão autônoma, lacuna com plano, pergunta da banca com 5 linhas ou mais
+- [x] Campo 07: 7a a 7e, com 3 objetos, 2 equívocos corrigidos e transferência
+- [x] Coerência entre Campo 01 e Campo 07
 - [ ] Painel de acompanhamento completo
 
 ## 🔵 CICLO 09 — 21/10 — Atualização e exclusão: CRUD completo
@@ -545,13 +545,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 09 — 21/10
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Completar as operações de atualização (`Update` na opção 3) e exclusão/reset (`Delete` na opção 4) no *PriVer*, garantindo coerência entre o estado em memória (`registroFile`) e os arquivos versionados em disco.
+2. **O que implementei (commits / arquivos / links):** Implementação da opção `"3"` (*Atualizar nome base*) que valida `if registroFile["registro_ativo"]:`, lê `novo_nome` com `.strip()`, renomeia o arquivo atual em disco via `os.rename(arquivo_antigo, novo_arquivo)` e atualiza `registroFile["nome_base"]` e `registroFile["ultimo_arquivo_salvo"]`; e da opção `"4"` (*Resetar / Deletar*) que restaura o estado limpo via `registroFile = templateFile.copy()` no repositório `PriVer` (`https://github.com/deuspato/PriVer`).
+3. **Objeto(s) de conhecimento mobilizado(s):** Mutabilidade de dicionários (`dict`), atualização de chaves específicas, cópia rasa (`.copy()`) para reinicialização de estado, manipulação de arquivos no sistema operacional (`os.path.isfile()`, `os.rename()`) e validação prévia de estado ativo (`if registroFile["registro_ativo"]:`).
+4. **Desvio ou erro encontrado + causa técnica:** Na primeira versão da opção `"3"`, atualizar o `nome_base` alterava apenas o texto exibido para as *próximas* versões (`v{versao + 1}_...`), deixando o arquivo já gerado (`ultimo_arquivo_salvo`) com o nome antigo no disco, além de não validar espaços em branco em `novo_nome`; causa técnica: ausência de chamada a `os.rename()` para sincronizar o arquivo físico já salvo e falta de `.strip()` na leitura de `novo_nome`.
+5. **Decisão de ajuste + fonte:** Aplicar `.strip()` em `novo_nome`, verificar `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:` e executar `os.rename(arquivo_antigo, novo_arquivo)` atualizando `registroFile["ultimo_arquivo_salvo"]`, além de impedir atualização antes de qualquer envio (`else: print("Envie um arquivo antes de atualizar.")`), fundamentado na documentação oficial do Python 3 (*`os` — Miscellaneous operating system interfaces* e *Mapping Types — `dict`*).
+6. **Feedback recebido e o que mudei:** **Marcos Oliveira (`@SantX0`)** confirmou nos testes que a exclusão lógica dos registros (opção 4) e a validação de entradas vazias funcionaram normalmente, apontando apenas a necessidade de manter o nome atualizado nos envios seguintes, o que foi corrigido com `if not registroFile["registro_ativo"]:` na opção 1 e `os.rename()` na opção 3.
+7. **Próximo passo:** Executar a Revisão por Pares nº 1 no repositório de **Marcos Oliveira** (`https://github.com/SantX0/AlgoritimosUNDB`) e iniciar a modularização do *PriVer* no Ciclo 10.
 
 ### 🧩 CAMPO 05 — Registro de Revisão por Pares
 *Adaptação do **Logbook do Time** (Apêndice C) para o CRUD individual. Documento atualizado pelo **revisor**. Cada decisão técnica relevante deve ter associado o objeto de conhecimento correspondente.*
@@ -564,9 +564,9 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 | | |
 |---|---|
-| **Autor do CRUD revisado** | _nome_ |
-| **Repositório revisado** | _link_ |
-| **Revisor** | _seu nome_ |
+| **Autor do CRUD revisado** | _Marcos Oliveira (`@SantX0`)_ |
+| **Repositório revisado** | _https://github.com/SantX0/AlgoritimosUNDB (`uploader_musicas.py`)_ |
+| **Revisor** | _Davi Gael Lopes (`@deuspato`)_ |
 | **Unidade curricular / Semestre** | Algoritmos e Programação · 2026.2 |
 | **Ciclo / data** | _Ciclo 09 · 21/10_ |
 
@@ -574,37 +574,37 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 | ETAPA DO PROCESSO | RESPONSÁVEL | PRAZO | STATUS | DESVIO / JUSTIFICATIVA |
 |---|---|---|---|---|
-| 1. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 2. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 3. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 4. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 5. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
+| 1. Clonagem e inspeção estrutural do repositório `SantX0/AlgoritimosUNDB` (`uploader_musicas.py` e `README.md`) | Revisor / Autor | 21/10 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Código identificado com 739 linhas monolíticas, sem decomposição em funções (`def`) e utilizando listas de 16 posições por registro. |
+| 2. Teste funcional de navegação no menu principal (opções `1` a `7`) | Revisor / Autor | 21/10 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Desvio encontrado: a `Opção 7 - Relatorio` constava no texto do menu, mas ao digitar `7` o programa retornava `"Opção inválida! Digite um número de 1 a 6."`. |
+| 3. Verificação das operações básicas de CRUD (cadastro, listagem, busca, atualização e exclusão) | Revisor / Autor | 21/10 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Operações de cadastro, listagem e exclusão funcionando no fluxo padrão; identificada oportunidade de persistência em arquivo (`musicas.json`). |
+| 4. Registro de passos de reprodução e devolutiva técnica ao colega Marcos Oliveira | Revisor / Autor | 21/10 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Reportada a causa técnica do bloqueio da Opção 7 (validação condicional restrita a `1..6`) e o risco de `ZeroDivisionError` no cálculo de médias com catálogo vazio. |
+| 5. Recebimento e análise da revisão cruzada feita por Marcos Oliveira no meu projeto (`PriVer`) | Revisor / Autor | 21/10 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Colega executou 11 testes no `PriVer` (8 passaram, 1 com ressalvas e 2 falharam: `os.system("clear")` no Windows, `FileNotFoundError`, barras `\` e perda do nome atualizado na opção 3). |
 
 **5b. ANÁLISE DE INSUMOS E CRITÉRIOS DE QUALIDADE:**
 
 | RECURSO | QTDE PLANEJADA | QTDE UTILIZADA | VARIAÇÃO | JUSTIFICATIVA TÉCNICA |
 |---|---|---|---|---|
-| _…_ | _…_ | _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ | _…_ | _…_ |
+| Casos de teste de menu e operações CRUD (`uploader_musicas.py`) | 7 opções | 8 execuções | +1 execução | Necessidade de retestar a Opção `7 - Relatorio` para confirmar a divergência entre o texto exibido no menu e o bloco condicional `if/elif/else`. |
+| Arquivos analisados no repositório `SantX0/AlgoritimosUNDB` | 2 arquivos (`uploader_musicas.py` e `README.md`) | 2 arquivos | 0 | Confronto entre os requisitos estatísticos prometidos no `README.md` e as opções efetivamente roteadas no menu principal. |
+| Testes cruzados recebidos no `PriVer` (`main.py`) | 10 testes | 11 testes | +1 teste | Marcos Oliveira executou 11 cenários no `PriVer`, revelando 4 pontos objetivos de melhoria incorporados nos commits seguintes. |
 
 **5c. CONTROLE DE QUALIDADE:**
-- **Critério ou norma técnica:** _…_
-- **A solução atende?** ☐ Sim ☐ Parcialmente ☐ Não
+- **Critério ou norma técnica:** Consistência entre as opções exibidas no menu principal e o roteamento condicional (`if/elif/else`), completude das operações CRUD e prevenção de divisão por zero em relatórios estatísticos.
+- **A solução atende?** ☐ Sim ☑ Parcialmente ☐ Não
 
 **5d. GESTÃO DE RISCOS:**
-- **Risco:** _…_
-- **Estratégia de mitigação:** _…_
+- **Risco:** Menu principal anunciar funcionalidades (`7 - Relatorio`) inacessíveis em tempo de execução ou relatórios quebrarem com `ZeroDivisionError` quando a lista `musicas` estiver vazia.
+- **Estratégia de mitigação:** Adicionar o ramo `elif opcao == "7":` alinhado ao menu exibido e proteger os cálculos de média e percentual com a guarda condicional `if len(musicas) > 0:`.
 
 **5e. RASTREABILIDADE DAS DECISÕES TÉCNICAS — COM VÍNCULO AO CONTEÚDO:**
 
 | DATA | DECISÃO TÉCNICA | RESP. | OBJETO DE CONHECIMENTO MOBILIZADO | FUNDAMENTAÇÃO / REFERÊNCIA |
 |---|---|---|---|---|
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
+| 21/10/2026 | Diagnosticar o bloqueio da `Opção 7 - Relatorio` e recomendar a inclusão de `elif opcao == "7":` na estrutura de decisão do menu. | Davi Gael Lopes (`@deuspato`) | Estruturas condicionais encadeadas (`if / elif / else`) e controle de fluxo. | Documentação Oficial do Python 3 (*More Control Flow Tools — `if` Statements*). |
+| 21/10/2026 | Recomendar guarda condicional `if len(musicas) > 0:` antes de calcular médias e percentuais no relatório estatístico. | Davi Gael Lopes (`@deuspato`) | Operadores relacionais (`>`), função `len()` e prevenção de `ZeroDivisionError`. | *Pense em Python* (Downey, Cap. 5 — Condicionais e Cap. 10 — Listas). |
+| 21/10/2026 | Recomendar a extração das 739 linhas em funções dedicadas (`cadastrar_musica()`, `listar_musicas()`, `buscar_musicas()`, `atualizar_musica()`, `excluir_musica()`, `gerar_relatorio()`). | Davi Gael Lopes (`@deuspato`) | Modularização de programas, definição de funções (`def`) e eliminação de código duplicado. | *Pense em Python* (Downey, Cap. 3 — Funções) e PEP 8. |
+| 21/10/2026 | Recomendar a migração das listas de 16 posições para dicionários (`dict`) com chaves nomeadas (`"id"`, `"titulo"`, `"tamanho_mb"`, `"status"`). | Davi Gael Lopes (`@deuspato`) | Estruturas de dados associativas (Dicionários `chave: valor`). | *Pense em Python* (Downey, Cap. 11 — Dicionários). |
+| 21/10/2026 | Recomendar persistência do catálogo em `musicas.json` nas operações de escrita para evitar perda de dados ao encerrar o terminal. | Davi Gael Lopes (`@deuspato`) | Manipulação de arquivos e serialização de dados (`json`). | Documentação Oficial do Python 3 (*`json` — JSON encoder and decoder*). |
 
 > **IMPORTANTE:** Decisão registrada sem objeto de conhecimento associado e sem referência é considerada **não rastreável** e não conta para a avaliação formativa. O vínculo entre processo e conteúdo é obrigatório em todas as decisões relevantes.
 
@@ -620,13 +620,13 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 10 — 28/10
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Iniciar a modularização do *PriVer* extraindo rotinas repetitivas de limpeza de terminal para função dedicada e avaliando os impactos de escopo antes de decompor o laço principal.
+2. **O que implementei (commits / arquivos / links):** Criação da função `def clear_screen():` no `main.py` (`https://github.com/deuspato/PriVer`), substituindo as 8 chamadas repetidas de `os.system("clear")` espalhadas pelo menu e pelas opções `1` a `5`, enquanto o fluxo principal do CRUD permaneceu intencionalmente estruturado em torno do dicionário `registroFile` (`--- VERSIONADOR 3D (SEM FUNÇÕES) ---`) para evitar erros de referência de escopo durante os ajustes da revisão por pares.
+3. **Objeto(s) de conhecimento mobilizado(s):** Definição e chamada de funções (`def`), reutilização de código (princípio DRY — *Don't Repeat Yourself*), escopo local versus escopo global e passagem de objetos mutáveis (`dict`). A função `clear_screen()` recebeu a responsabilidade exclusiva de detectar o sistema operacional (`os.name == "nt"`) e executar `cls` ou `clear`.
+4. **Desvio ou erro encontrado + causa técnica:** Ao testar a extração de outras partes do código para funções isoladas, a reatribuição `registroFile = templateFile.copy()` na opção `"4"` criava uma variável local sombreada dentro da função sem atualizar o dicionário `registroFile` do laço principal; causa técnica: em Python, atribuir um novo objeto a um nome dentro de uma função cria um vínculo local (`UnboundLocalError` ou perda de referência), diferentemente de apenas mutar chaves existentes.
+5. **Decisão de ajuste + fonte:** Consolidar imediatamente a função `clear_screen()` (eliminando código duplicado de limpeza de tela em todo o arquivo) e manter o estado `registroFile` no escopo principal até estruturar assinaturas com retorno explícito (`return templateFile.copy()`), fundamentado em *Pense em Python* (Cap. 3 — Funções e Cap. 11 — Variáveis globais) e na documentação oficial do Python 3.
+6. **Feedback recebido e o que mudei:** A revisão de **Marcos Oliveira (`@SantX0`)** motivou a criação de `clear_screen()` para resolver a incompatibilidade do `os.system("clear")` no Windows; após a mudança, o terminal passou a limpar corretamente tanto no Windows (`nt`) quanto no Linux/macOS.
+7. **Próximo passo:** Estudar recursividade (caso base e passo recursivo) no Ciclo 11 para percorrer cadeias de versões e estruturar o Campo 06 para a Defesa Técnica.
 
 ## 🔵 CICLO 11 — 04/11 — Recursividade
 
@@ -642,35 +642,37 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 11 — 04/11
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Compreender os fundamentos de recursividade (caso base, passo recursivo e pilha de execução) e avaliar tecnicamente onde ela se aplica ou não na arquitetura atual do *PriVer*.
+2. **O que implementei (commits / arquivos / links):** Estudo dirigido e prototipação em laboratório sobre decomposição recursiva de sequências de versões (`v1`, `v2`, ..., `vn`), mantendo no código de produção do `PriVer` (`https://github.com/deuspato/PriVer`) o controle iterativo via `while registroFile["executando"]:` e o incremento direto `registroFile["versao"] += 1` para o versionamento físico de arquivos.
+3. **Objeto(s) de conhecimento mobilizado(s):** Recursividade, caso base (condição de parada obrigatória), passo recursivo com redução do problema, pilha de chamadas (*call stack*), risco de `RecursionError` e critério técnico de escolha entre iteração (`while`/`for`) e recursão.
+4. **Desvio ou erro encontrado + causa técnica:** Nos exercícios de recursividade em laboratório, uma função de contagem regressiva de versões sem condição de parada ampla (`versao == 0` em vez de `versao <= 0`) gerou `RecursionError: maximum recursion depth exceeded` quando testada com entrada negativa; causa técnica: ausência de caso base defensivo para valores menores que zero e crescimento ilimitado da pilha de frames em Python.
+5. **Decisão de ajuste + fonte:** Não substituir o laço principal `while registroFile["executando"]:` do *PriVer* por chamadas recursivas (pois um menu interativo contínuo na CLI poderia estourar o limite padrão de 1000 frames da pilha do Python), reservando a recursividade apenas para futuras rotinas finitas de varredura hierárquica de diretórios/versões, fundamentado em *Pense em Python* (Cap. 5 — Recursividade e Cap. 6 — Funções com resultado).
+6. **Feedback recebido e o que mudei:** Discussão em aula sobre limites de pilha em Python e legibilidade; documentei a decisão de manter laços iterativos para interação com o usuário na CLI.
+7. **Próximo passo:** Consolidar no Ciclo 12 a refatoração de qualidade de código do *PriVer* aplicando todas as melhorias da revisão por pares e concluir a Revisão nº 2 de **Marcos Oliveira (`@SantX0`)**.
 
 ### 🧩 CAMPO 06 — Próximos passos para a defesa
 *AV Qualis — Grupo 3 | Individual | Quinta 26/11, 23h59*
 
 **6a. Decisão técnica que defendo com plena autonomia — o que aprendi que é exclusivamente meu e não consigo transferir para nenhum colega:**
 
-> _…_
+> A decisão técnica que defendo com plena autonomia no *PriVer* (`https://github.com/deuspato/PriVer`) é a modelagem baseada em um **dicionário molde imutável (`templateFile`) clonado via `.copy()` para o estado ativo (`registroFile`)**, combinada com o **versionamento físico real em disco (`v1_...`, `v2_...`) via leitura e escrita binária (`"rb"` / `"wb"`)** e a **preservação do `nome_base` customizado entre versões subsequentes (`if not registroFile["registro_ativo"]:`)**. Fui eu quem projetou esse esquema de 8 chaves, diagnosticou o problema de sobrescrita de nome após a opção 3 e implementou a normalização multiplataforma (`os.path.normpath`, `os.path.basename`, `os.path.splitext`) com tratamento de exceções (`FileNotFoundError`, `PermissionError`).
 
 **6b. Lacuna técnica e plano de ação para saná-la:**
 
-- **Lacuna:** _…_
-- **Plano de ação (passos e datas):** _…_
+- **Lacuna:** No código atual do *PriVer*, apenas `clear_screen()` está encapsulada em função (`def`), enquanto as 5 opções do menu ainda residem dentro do bloco principal `while registroFile["executando"]:`, e o dicionário `registroFile` ainda não é persistido em um arquivo de metadados (`estado.json`) para retomar a contagem de `versao` e `qtd_envios` caso o terminal seja fechado e reaberto.
+- **Plano de ação (passos e datas):**
+  1. **Até 25/11/2026:** Extrair cada opção do menu em funções dedicadas (`enviar_arquivo(registro)`, `consultar_versao(registro)`, `atualizar_nome(registro)`, `resetar_registro()`), retornando o dicionário atualizado para evitar problemas de escopo na opção 4.
+  2. **Até 26/11/2026 (antes das 23h59):** Adicionar persistência de `registroFile` em arquivo `.json` utilizando o módulo nativo `json` e realizar o commit final de atualização no repositório `PriVer`.
 
 **6c. Pergunta que a banca pode fazer — com resposta fundamentada (mínimo 5 linhas):**
 
-- **Pergunta:** _…_
+- **Pergunta:** *"No seu projeto PriVer, por que você optou por usar `registroFile = templateFile.copy()` na inicialização e na opção 4 (Resetar / Deletar), em vez de fazer atribuição direta `registroFile = templateFile` ou guardar os campos em uma lista simples?"*
 - **Resposta:**
 
-> _…_
+> Em Python, dicionários são estruturas de dados mutáveis manipuladas por referência. Se eu fizesse a atribuição direta `registroFile = templateFile`, ambas as variáveis apontariam para o mesmo endereço de memória (*aliasing*), fazendo com que cada incremento em `registroFile["versao"]` ou alteração em `registroFile["nome_base"]` modificasse também o `templateFile`; consequentemente, ao acionar a opção 4 (*Resetar / Deletar*), o molde já estaria contaminado e não restauraria os valores iniciais zerados. O método `.copy()` cria uma cópia rasa independente, garantindo que `templateFile` permaneça intacto como padrão de fábrica. Além disso, o uso de dicionário com chaves semânticas (`"versao"`, `"qtd_envios"`, `"ultimo_arquivo_salvo"`) elimina a fragilidade de acessar dados por índices numéricos em listas, aumentando a legibilidade e a segurança na manutenção do CRUD, conforme fundamentado em *Pense em Python* (Cap. 10 e Cap. 11).
 
-**Objeto de conhecimento mobilizado:** _…_
-**Fonte:** _…_
+**Objeto de conhecimento mobilizado:** Mutabilidade de objetos, referência versus cópia (`.copy()` / *aliasing*) e estruturas de dados associativas (`dict`).
+**Fonte:** Downey, Allen B. — *Pense em Python* (Cap. 10 — Objetos, valores e *aliasing*; Cap. 11 — Dicionários) e Documentação Oficial do Python 3 (*Mapping Types — `dict.copy()`*).
 
 ## 🔵 CICLO 12 — 11/11 — Refatoração e qualidade de código
 
@@ -688,58 +690,58 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 12 — 11/11
-1. **Desafio do ciclo (em 1 frase):** _…_
-2. **O que implementei (commits / arquivos / links):** _…_
-3. **Objeto(s) de conhecimento mobilizado(s):** _…_
-4. **Desvio ou erro encontrado + causa técnica:** _…_
-5. **Decisão de ajuste + fonte:** _…_
-6. **Feedback recebido e o que mudei:** _…_
-7. **Próximo passo:** _…_
+1. **Desafio do ciclo (em 1 frase):** Refatorar a qualidade, portabilidade e resiliência de E/S do *PriVer* após os apontamentos da revisão por pares, eliminando código duplicado de limpeza de tela e tratando caminhos e exceções de arquivo.
+2. **O que implementei (commits / arquivos / links):** Refatoração consolidada no `PriVer` (`https://github.com/deuspato/PriVer`): criação da função `clear_screen()` para compatibilidade Windows/Unix; higienização do caminho com `.strip("\"' ")`, `os.path.normpath()`, `os.path.basename()` e `os.path.splitext()`; substituição de `open()`/`close()` manual por gerenciador de contexto `with open(...)`; tratamento de `FileNotFoundError` e `PermissionError`; e sincronização de renomeação física via `os.rename()` na opção `"3"`.
+3. **Objeto(s) de conhecimento mobilizado(s):** Refatoração de código, programação defensiva, tratamento de exceções (`try / except`), gerenciamento seguro de recursos com `with` (*context managers*), portabilidade de sistema operacional (`os.name`, `os.path`) e remoção de código duplicado (PEP 8).
+4. **Desvio ou erro encontrado + causa técnica:** Na primeira versão do código, a abertura de arquivos sem `with` nem `try/except` deixava descritores de arquivo abertos em caso de erro de escrita e fechava o programa com `FileNotFoundError` diante de caminhos inválidos, além de falhar no Windows com barras `\` e `os.system("clear")`; causa técnica: acoplamento a convenções Unix (`/`, `clear`) e ausência de tratamento de exceções de E/S.
+5. **Decisão de ajuste + fonte:** Refatorar todas as operações de leitura e escrita para `with open(...)` dentro de `try / except FileNotFoundError` e `except PermissionError`, padronizar caminhos com `os.path` e centralizar a limpeza de tela em `clear_screen()`, fundamentado na documentação oficial do Python 3 (*Errors and Exceptions*, *`os.path`* e *Reading and Writing Files*) e no guia PEP 8.
+6. **Feedback recebido e o que mudei:** Todos os 4 pontos levantados por **Marcos Oliveira (`@SantX0`)** na revisão cruzada foram validados e incorporados nesta refatoração do *PriVer*, elevando a estabilidade do sistema diante de entradas inválidas e caminhos do Windows.
+7. **Próximo passo:** Registrar a Revisão por Pares nº 2 (foco em qualidade e casos de teste `CT-02`, `CT-03b`, `CT-04`) para **Marcos Oliveira (`@SantX0`)** e preencher o Campo 07 de evolução conceitual.
 
 ### 🧩 CAMPO 05 — Registro de Revisão por Pares (revisão nº 2)
 
 | | |
 |---|---|
-| **Autor do CRUD revisado** | _nome_ |
-| **Repositório revisado** | _link_ |
-| **Revisor** | _seu nome_ |
+| **Autor do CRUD revisado** | _Marcos Oliveira (`@SantX0`)_ |
+| **Repositório revisado** | _https://github.com/SantX0/AlgoritimosUNDB (`uploader_musicas.py`)_ |
+| **Revisor** | _Davi Gael Lopes (`@deuspato`)_ |
 | **Ciclo / data** | _Ciclo 12 · 11/11_ |
 
 **5a. AVANÇO DO PROCESSO DE REVISÃO:**
 
 | ETAPA DO PROCESSO | RESPONSÁVEL | PRAZO | STATUS | DESVIO / JUSTIFICATIVA |
 |---|---|---|---|---|
-| 1. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 2. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 3. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 4. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
-| 5. _…_ | Revisor / Autor | _DD/MM_ | ☐ Concluída ☐ Em andamento ☐ Com desvio | _…_ |
+| 1. Execução de testes de qualidade e fronteira (`CT-02`: *case-sensitivity* em Gênero, Formato e `fim`) | Revisor / Autor | 11/11 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Desvio detectado: digitar `rock`, `mp3` em minúsculo ou `FIM` em maiúsculo faz o programa rejeitar a entrada por falta de normalização textual. |
+| 2. Teste de tipagem e separador decimal (`CT-03b`: entrada de `tamanho_mb` no padrão PT-BR `25,5`) | Revisor / Autor | 11/11 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Desvio detectado: entradas com vírgula decimal (`25,5`) são bloqueadas porque o código não aplica `.replace(",", ".")` antes da conversão `float()`. |
+| 3. Teste de validação de data de calendário (`CT-04`: datas inexistentes como `31/02/2026`) | Revisor / Autor | 11/11 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Desvio detectado: o código valida dia (`1-31`) e mês (`1-12`) isoladamente, aceitando datas impossíveis como `31/02/2026`. |
+| 4. Auditoria de qualidade estrutural (modularização, estrutura de dados e persistência) | Revisor / Autor | 11/11 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Identificada necessidade de quebrar as 739 linhas em funções dedicadas, migrar listas de 16 índices para dicionários e salvar em `musicas.json`. |
+| 5. Entrega do plano de correção recomendado ao autor (`@SantX0`) e verificação da resposta | Revisor / Autor | 11/11 | ☑ Concluída ☐ Em andamento ☐ Com desvio | Plano detalhado entregue com snippets de correção (`.strip().lower()`, `.replace(",", ".")`, validação de dias por mês e refatoração estrutural). |
 
 **5b. ANÁLISE DE INSUMOS E CRITÉRIOS DE QUALIDADE:**
 
 | RECURSO | QTDE PLANEJADA | QTDE UTILIZADA | VARIAÇÃO | JUSTIFICATIVA TÉCNICA |
 |---|---|---|---|---|
-| _…_ | _…_ | _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ | _…_ | _…_ |
+| Casos de teste de qualidade e fronteira (`CT-02`, `CT-03b`, `CT-04`) | 3 grupos de teste | 6 variações de entrada | +3 variações | Teste de múltiplos valores por cenário (`rock`/`mp3`/`FIM`, `25,5` vs `25.5`, e `31/02/2026`) para isolar cada falha de validação. |
+| Linhas de código auditadas em `uploader_musicas.py` | 739 linhas | 739 linhas | 0 | Inspeção completa das rotinas de entrada, validação de datas/tamanhos e armazenamento em listas de 16 posições. |
+| Funções e estruturas recomendadas no plano de refatoração | 6 funções + 1 schema `dict` + 1 arquivo `.json` | 6 funções + 1 schema `dict` + 1 arquivo `.json` | 0 | Proposta concreta de refatoração (`cadastrar_musica()` a `gerar_relatorio()`, dicionário nomeado e persistência em `musicas.json`). |
 
 **5c. CONTROLE DE QUALIDADE:**
-- **Critério ou norma técnica:** _…_
-- **A solução atende?** ☐ Sim ☐ Parcialmente ☐ Não
+- **Critério ou norma técnica:** Resistência a entradas com variação de maiúsculas/minúsculas (*case-insensitivity*), aceitação de vírgula decimal PT-BR (`25,5`), validação real de dias por mês no calendário, modularização em funções e persistência de dados.
+- **A solução atende?** ☐ Sim ☑ Parcialmente ☐ Não
 
 **5d. GESTÃO DE RISCOS:**
-- **Risco:** _…_
-- **Estratégia de mitigação:** _…_
+- **Risco:** Dados válidos do usuário serem rejeitados por diferenças triviais de formatação (`mp3` vs `MP3`, `25,5` vs `25.5`), datas corrompidas (`31/02/2026`) entrarem no catálogo ou todo o cadastro ser perdido ao fechar o terminal.
+- **Estratégia de mitigação:** Normalizar strings com `.strip().lower()`/`.upper()`, converter vírgula com `.replace(",", ".")`, validar dias máximos por mês (incluindo ano bissexto em fevereiro) e persistir o catálogo em `musicas.json`.
 
 **5e. RASTREABILIDADE DAS DECISÕES TÉCNICAS — COM VÍNCULO AO CONTEÚDO:**
 
 | DATA | DECISÃO TÉCNICA | RESP. | OBJETO DE CONHECIMENTO MOBILIZADO | FUNDAMENTAÇÃO / REFERÊNCIA |
 |---|---|---|---|---|
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
-| _DD/MM/AA_ | _…_ | _…_ | _…_ | _…_ |
+| 11/11/2026 | Propor normalização de strings com `.strip().lower()` e `.strip().upper()` para corrigir falhas de *case-sensitivity* no `[CT-02]` (`rock`, `mp3`, `FIM`). | Davi Gael Lopes (`@deuspato`) | Manipulação de strings (`.strip()`, `.lower()`, `.upper()`) e comparação textual. | Documentação Oficial do Python 3 (*Built-in Types — String Methods*). |
+| 11/11/2026 | Propor validação real de dias por mês (30 dias para meses `4, 6, 9, 11` e 28/29 para fevereiro) para corrigir `[CT-04]` (`31/02/2026`). | Davi Gael Lopes (`@deuspato`) | Estruturas condicionais compostas (`if/elif/else`) e operadores lógicos (`and`, `or`). | *Pense em Python* (Downey, Cap. 5 — Condicionais e expressões booleanas). |
+| 11/11/2026 | Propor aplicação de `.strip().replace(",", ".")` antes de `float()` para aceitar vírgula decimal PT-BR no `[CT-03b]` (`25,5`). | Davi Gael Lopes (`@deuspato`) | Coerção de tipos (`float()`) e tratamento defensivo de entrada numérica. | Documentação Oficial do Python 3 (*Built-in Functions — `float()`*). |
+| 11/11/2026 | Propor refatoração das 739 linhas em 6 funções dedicadas e migração das listas de 16 posições para dicionários nomeados. | Davi Gael Lopes (`@deuspato`) | Modularização (`def`) e estruturas de dados associativas (`dict`). | *Pense em Python* (Downey, Cap. 3 — Funções e Cap. 11 — Dicionários). |
+| 11/11/2026 | Propor persistência do catálogo em `musicas.json` nas operações de cadastro, atualização e exclusão. | Davi Gael Lopes (`@deuspato`) | Leitura/escrita de arquivos e serialização JSON (`json`). | Documentação Oficial do Python 3 (*`json` — JSON encoder and decoder*). |
 
 ### 🧩 CAMPO 07 — Evolução conceitual
 *AV Qualis — Grupo 3 | Individual | Quinta 26/11, 23h59*
@@ -748,30 +750,31 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **7a. O que eu pensava no início do ciclo (com base no Campo 01 — registrar a hipótese inicial e os objetos de conhecimento que achava conhecer):**
 
-> _…_
+> No início do semestre (Campo 01), eu pensava que os problemas de um CRUD em linha de comando se resumiam a erros simples de tipagem na leitura via `input()` e a falhas ortográficas nos nomes das variáveis (`NameError` e `ValueError`). Minha visão ainda era restrita a variáveis isoladas e validações pontuais, sem dominar a modelagem de estado em dicionários com cópia independente (`.copy()`), o tratamento de exceções de arquivo (`FileNotFoundError`, `PermissionError`), a portabilidade de caminhos entre sistemas operacionais (`os.path`) nem a importância da revisão cruzada entre pares.
 
 **7b. O que aprendi — conceitos, princípios ou relações técnicas que não dominava no início e que agora consigo explicar com precisão (mínimo 3 objetos de conhecimento):**
 
 | OBJETO DE CONHECIMENTO | O QUE EU NÃO DOMINAVA | O QUE APRENDI E CONSIGO DEMONSTRAR | EVIDÊNCIA (campo do Logbook onde aparece) |
 |---|---|---|---|
-| _…_ | _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ | _…_ |
-| _…_ | _…_ | _…_ | _…_ |
+| **Dicionários e Cópia Rasa (`.copy()` vs Referência)** | Não distinguia atribuição por referência de cópia de objeto mutável e estruturava atributos em variáveis soltas. | Modelo o estado completo do versionador em um dicionário (`templateFile` com 8 chaves) e utilizo `registroFile = templateFile.copy()` na inicialização e no reset (opção 4) para evitar *aliasing* e corrupção do molde original. | Ciclos 07, 08, 09 e Campo 06c |
+| **Controle de Fluxo Defensivo e Operadores Lógicos (`not`, `and`)** | Aplicava condicionais simples sem prever estados anteriores ou condições compostas antes de alterar arquivos. | Uso condicionais aninhadas e operadores lógicos (`if not registroFile["registro_ativo"]:` e `if os.path.isfile(arquivo_antigo) and arquivo_antigo != novo_arquivo:`) para preservar o nome base atualizado entre versões e validar renomeações seguras. | Ciclos 05, 09 e Campo 04d |
+| **Tratamento de Exceções (`try/except`) e E/S Segura (`with open`, `os.path`)** | Manipulava caminhos com fatiamento manual (`rfind("/")`), comandos fixos (`clear`) e abria arquivos sem proteção contra falhas de disco. | Encapsulo leitura e escrita binária (`"rb"`/`"wb"`) em gerenciadores `with open(...)` protegidos por `try/except FileNotFoundError` e `PermissionError`, normalizo caminhos com `os.path` e detecto o SO em `clear_screen()`. | Ciclos 07, 08, 10, 12 e Campo 04e |
+| **Qualidade de Software e Revisão Técnica por Pares** | Testava apenas o fluxo ideal digitando caminhos válidos no próprio terminal. | Sei auditar código de terceiros com casos de teste de fronteira (case-sensitivity, vírgula decimal, calendário, rotas de menu) e incorporar feedback técnico externo (`@SantX0`) em commits rastreáveis. | Campo 05 (Revisões nº 1 e nº 2) e Ciclo 12 |
 
 **7c. Conceitos que precisei corrigir ao longo do ciclo — onde eu estava equivocado e o que o corrigiu (Fechamento Teórico, pesquisa, Peer Review, arguição):**
 
-1. **Equívoco:** _…_ — **Correção:** _…_
-   **O que corrigiu:** _…_
-2. **Equívoco:** _…_ — **Correção:** _…_
-   **O que corrigiu:** _…_
+1. **Equívoco:** Acreditar que fatiar strings manualmente procurando `"/"` e usar `os.system("clear")` diretamente funcionaria em qualquer ambiente, e que não era necessário tratar erros na abertura de arquivos enviados pelo usuário. — **Correção:** Aprendi que caminhos de arquivo variam entre sistemas operacionais (`\` no Windows vs `/` no Linux), que `os.name` permite adaptar comandos do terminal e que toda operação de E/S externa exige `with open(...)` e `try/except FileNotFoundError` / `PermissionError`.
+   **O que corrigiu:** A revisão por pares realizada por **Marcos Oliveira (`@SantX0`)** no Windows e a consulta à documentação oficial do Python 3 (`os.path` e *Errors and Exceptions*).
+2. **Equívoco:** Supor que atualizar `registroFile["nome_base"]` na opção 3 bastava para as versões futuras sem proteger a atribuição na opção 1 nem renomear o arquivo já salvo em disco. — **Correção:** Compreendi a necessidade de sincronizar o estado em memória com o arquivo físico (`os.rename`) e proteger `registroFile["nome_base"]` com `if not registroFile["registro_ativo"]:` nos envios subsequentes.
+   **O que corrigiu:** Teste de fluxo encadeado (Opção 1 $\rightarrow$ Opção 3 $\rightarrow$ Opção 1) apontado no *Peer Review* e validado no Ciclo 05 e Ciclo 09.
 
 **7d. Transferência — como este aprendizado se aplica a um contexto diferente do problema trabalhado (ao menos 1 exemplo concreto da área de formação):**
 
-> _…_
+> Na área de **Sistemas de Informação**, os conceitos aplicados no *PriVer* — controle de estado via dicionários clonados (`.copy()`), validação defensiva de entradas, renomeação padronizada de arquivos e tratamento de exceções `FileNotFoundError`/`PermissionError` — transferem-se diretamente para o desenvolvimento de um **módulo de ingestão e versionamento de documentos fiscais (XML/PDF) em um sistema ERP**. Nesse contexto, cada nota fiscal importada seria validada antes da cópia binária para o diretório de auditoria, recebendo prefixos versionados sequenciais e tratamento explícito para arquivos corrompidos, caminhos inválidos ou bloqueio de permissão em servidores Windows e Linux.
 
 **7e. Avaliação honesta do próprio percurso — o que ainda não domino e preciso aprofundar após este ciclo:**
 
-> _…_
+> Ainda preciso aprofundar a **modularização completa de aplicações CLI** (decompondo todas as opções do menu em funções com passagem explícita de parâmetros e `return` sem depender de estado no escopo principal), a **persistência estruturada de metadados em JSON e bancos de dados relacionais (`SQLite`/`SQL`)**, a **aplicação prática de recursividade em estruturas hierárquicas de diretórios** e a **escrita de testes unitários automatizados (`pytest`)**.
 
 ---
 
